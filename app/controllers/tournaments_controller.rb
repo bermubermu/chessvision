@@ -5,8 +5,7 @@
 class TournamentsController < ApplicationController
 
 	before_filter :authenticate, :only => [:show, :edit, :update, :destroy, :new, :create, :index, :participants, :versus, :classification]
-	before_filter :correct_user2, :only => [:edit, :destroy]
-	before_filter :correct_user, :only => [:participants, :versus, :classification]
+
 
 
 	def index
