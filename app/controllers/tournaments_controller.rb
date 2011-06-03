@@ -540,34 +540,7 @@ end
 		  deny_access unless signed_in?
 		end
 
-	   def correct_user
-		@tournament = Tournament.find(cookies[:last_tournament_id])
-		@player2 = Player.new(0)
-		@player2.id_usuario = 0
-		@player2.id_usuario2 = 0
-		@player2.id_tournament = 0
-		@player2.save
 
-		@add = Player.find(:first, :conditions => ["(id_usuario2=? AND id_tournament=?) OR id=?", current_user.id, @tournament.id, @player2.id])
-
-
-		if (current_user.admin? || @add.id_usuario2==current_user.id || current_user.id==@tournament.id_usuario)
-			@player2.destroy
-		else
-			if @tournament.visible == "public" || @tournament.visible == "publico"
-				@player2.destroy
-			else
-				@player2.destroy
-				redirect_to(tournaments_path)
-			end
-		end
-            end
-
-		def correct_user2
-			@tournament = Tournament.find(cookies[:last_tournament_id])
-			@user = User.find(id=@tournament.id_usuario) 
-			redirect_to(tournaments_path) unless current_user?(@user) unless current_user.admin?
-		end
 
 
 end
