@@ -1,0 +1,100 @@
+<div class="mapaindex">
+</div>
+<div class="mapindex">
+	<% if cookies[:langu] == "en" %>
+<% if @per==0 %>
+		<div class="msgindex2">
+			<% if @vvv==1 %>
+				<%= link_to "Details and/or download", @book %>
+			<% else %>
+				Details and/or downloads are not available.
+			<% end %>
+		</div>
+		<div class="msgindex">Edit the Result
+		</div>
+		  <br /><br /><%= form_for(@battle, :html => { :multipart => true }) do |f| %>
+		  <%= render 'shared/error_messages2', :object => f.object %>
+		  <div class="field1">
+				Result
+		  </div>
+                  <div class="field3">
+				<select name=battle[result] class="langu" >
+					<option> 0 
+					<option> 0.5
+					<option> 1
+				</select> 
+		  </div>
+		    <div class="actions">
+		    <%= f.submit "Record Result >>", :class => "actions5"%>
+		  </div>
+		<% end %>
+				<div class="informat">
+					0&nbsp;&nbsp;&nbsp;&nbsp;= Winner White player<br />
+					0.5 = Draw<br />
+					1&nbsp;&nbsp;&nbsp;&nbsp;= Winner Black player<br />
+				</div>
+<% else %>
+	<div class="msgindex3">
+		<% if @vvv==1 %>
+			<%= link_to "Details and/or download", @book %>
+		<% else %>
+			Details and/or downloads are not available.
+		<% end %>
+	</div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+	<% else %>
+<% if @per==0 %>
+		<div class="msgindex2">
+			<% if @vvv==1 %>
+				<%= link_to "Detalles y/o descarga", @book %>
+			<% else %>
+				Detalles y/o descarga no disponible
+			<% end %>
+		</div>
+		<div class="msgindex">Edita el Resultado
+		</div>
+		  <br /><br /><%= form_for(@battle, :html => { :multipart => true }) do |f| %>
+		  <%= render 'shared/error_messages2', :object => f.object %>
+		  <div class="field1">
+				Resultado
+		  </div>
+                  <div class="field3">
+				<select name=battle[result] class="langu" >
+					<option> 0 
+					<option> 0.5
+					<option> 1
+				</select> 
+		  </div>
+		    <div class="actions">
+		    <%= f.submit "Grabar Resultado >>", :class => "actions5"%>
+		  </div>
+		<% end %>
+				<div class="informat">
+					0&nbsp;&nbsp;&nbsp;&nbsp;= Ganador jugador Blancas<br />
+					0.5 = Empate<br />
+					1&nbsp;&nbsp;&nbsp;&nbsp;= Ganador jugador Negras<br />
+				</div>
+<% else %>
+		<div class="msgindex3">
+			<% if @vvv==1 %>
+				<%= link_to "Detalles y/o descarga", @book %>
+			<% else %>
+				Detalles y/o descarga no disponible
+			<% end %>
+		</div>
+<% end %>
+	<% end %>
+</div>
+<div class="mapbindex">
+</div>

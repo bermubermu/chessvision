@@ -1,0 +1,179 @@
+<div class="mapaindex">
+</div>
+<div class="mapindex">
+	<% if cookies[:langu] == "en" %>
+		<div class="msgindex">Edit your PGN
+		</div>
+		  <br /><br /><%= form_for(@book, :html => { :multipart => true }) do |f| %>
+		  <%= render 'shared/error_messages2', :object => f.object %>
+		  <div class="field1">
+		    <%= f.label :success%>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :event, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :site %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :site, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :white %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :white, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :elo %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :elo_white, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :black %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :black, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :elo %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :elo_black, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :round %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :round, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :date %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :date, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+				Result
+		  </div>
+                  <div class="field3">
+				<select name=book[result] class="langu" >
+					<option>
+					<option> 0 
+					<option> 1/5
+					<option> 1
+				</select> 
+		  </div>
+		  <div class="field1">
+		    <%= f.label :eco %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :eco, :class => "dentr" %>
+		  </div> 
+		  <div class="field1">
+		    <%= f.label :PGN %>
+		  </div>
+		  <div class="field3">
+		    <%= f.file_field :attachment, :class => "dentr2" %>
+		  </div>
+		    <div class="field111">
+		    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.label :coment %>
+		  </div>
+		  <div class="field2">
+		    <br /><%= f.text_area :description, :class => "textoo"%>
+		  </div>
+		    <div class="actions">
+		    <%= f.submit "Edit PGN >>", :class => "actions2"%>
+		  </div>
+		<% end %>
+	<% else %>
+		<div class="msgindex">Edita tu PGN
+		</div>
+		  <br /><br /><%= form_for(@book, :html => { :multipart => true }) do |f| %>
+		  <%= render 'shared/error_messages2', :object => f.object %>
+		  <div class="field1">
+		    <%= f.label :evento %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :event, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :lugar %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :site, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :blancas %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :white, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :elo %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :elo_white, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :negras %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :black, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :elo %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :elo_black, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :ronda %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :round, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :fecha %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :date, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+				Nota
+		  </div>
+                  <div class="field3">
+				<select name=book[result] class="langu" >
+					<option>
+					<option> 0 
+					<option> 1/5
+					<option> 1
+				</select> 
+		  </div>
+		  <div class="field1">
+		    <%= f.label :eco %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :eco, :class => "dentr" %>
+		  </div> 
+		  <div class="field1">
+		    <%= f.label :PGN %>
+		  </div>
+		  <div class="field3">
+		    <%= f.file_field :attachment, :class => "dentr2" %>
+		  </div>
+		    <div class="field111">
+		    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.label :comentario %>
+		  </div>
+		  <div class="field2">
+		    <br /><%= f.text_area :description, :class => "textoo"%>
+		  </div>
+		    <div class="actions">
+		    <%= f.submit "Editar PGN >>", :class => "actions2"%>
+		  </div>
+		<% end %>
+	<% end %>
+</div>
+<div class="mapbindex">
+</div>

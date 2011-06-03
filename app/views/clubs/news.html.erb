@@ -1,0 +1,105 @@
+<div class="pag">
+	<%= will_paginate @noticess, :class => 'paginationpost', :previous_label => i_previous, :next_label => i_next %>
+</div>
+
+<div class="mapared">
+</div>
+<div class="mapred">
+
+	<div class="red1">
+		<div class="redlogo">
+		</div>
+		<div class="redmenu">
+			<div class="redmenu2">			
+				<%= link_to @information, @club %>
+			</div>
+			<div class="redmenu3">
+				<%= link_to @news, news_path %>
+			</div>
+			<div class="redmenu2">
+				<%= link_to @board, board_path %>
+			</div>
+			<div class="redmenu2">
+				<%= link_to @friends, friends_path %>
+			</div>
+			<% if @add2 == "dos" || current_user.admin? %>
+				<div class="redmenu2">
+					<br /><br /><%= link_to @request_ac, requestt_path %>
+				</div>
+				<div class="redmenu2">
+					<% if cookies[:langu]== "en" %>
+						<%= link_to "Delete Club", @club, :method => :delete, :confirm => "You sure?",
+										:title => "Delete #{@club.name}" %>
+					<% else %>
+						<%= link_to "Eliminar Club", @club, :method => :delete, :confirm => "¿Estás seguro?", :title => "Delete #{@club.name}" %>
+					<% end %>
+					
+				</div>
+			<% end %>
+		</div>
+
+		<% if cookies[:langu]== "en" %>
+			<% if @add2 == "uno" %>
+				<div class="redsolicitud">
+					<div class="redsolicituddd"> 
+						Welcome, <%= link_to current_user.name, current_user %><br /> Here you will find 
+						information about this club and have access to all areas.
+					</div>
+				</div>
+			<% end %>
+		<% else %>
+			<% if @add2 == "uno" %>
+				<div class="redsolicitud">
+					<div class="redsolicituddd"> 
+						Bienvenido, <%= link_to current_user.name, current_user %><br /> Aquí podrás 
+						encontrar información sobre este club y tener acceso a todas las áreas.
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+
+	</div>	
+	<div class="red2">
+	</div>	
+	<div class="red3">
+			<div class="redcont1">
+				<div class="redcont11">
+					<div class="redcont11a">
+						<%= @club.name %>
+					</div>
+					<div class="redcont11b">
+						<%= @club.address %> (<%= @club.province %>)
+					</div>
+				</div>
+				<div class="redcont111">
+				</div>
+			</div>
+			<div class="redcont2">
+				<div class="redfile1">
+				</div>
+				<div class="redfile2">
+					<div class="redfile22">
+						<% if @add2 == "dos" || current_user.admin? %>
+							<%= render 'shared/notice_form' %>
+						<% else %>
+							<div class="msg"><%=@not%>
+							</div>	
+						<% end %>
+						<div class="redli">
+							<ul class="redposts">
+								<%= render @noticess %><br />
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="redfile3">
+				</div>
+			</div>
+	</div>	
+</div>
+<div class="mapbred">
+</div>
+
+
+
+

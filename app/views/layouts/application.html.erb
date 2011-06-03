@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%= csrf_meta_tag %>
+    <%= render 'layouts/stylesheets' %>
+    <%= javascript_include_tag :defaults %>
+  </head>
+  <body>
+    <div class="container">
+	<%= render 'layouts/header' %>
+	<%= render 'layouts/body' %>
+	<%= render 'layouts/footer' %>
+    </div>
+  </body>
+</html>

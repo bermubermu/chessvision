@@ -1,0 +1,441 @@
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  New Clubs   --------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.textooo {
+	background-color: #666666;
+	width: 505px;
+	height: 60px;
+	color: #cacaca;
+	font-size: 11px;
+	border: none;
+	margin-top: 50px;
+	margin-left: -285px;
+}
+
+
+.actions5 {
+	margin-top: 60px;
+	background-color: #313131;
+	border:none;
+	color: #cacaca;
+	font-size: 13px;
+	float:right;
+	margin-right: 50px;
+}
+
+
+
+.mapindex {
+	background-color: #313131;
+	height:420px;
+	width: 657px;
+	float:left;
+	margin-left: 25px;
+	padding:0px;
+	overflow: auto;
+}
+
+.mapaindex {
+	background: url('../images/f11.png') no-repeat;
+	width: 657px;
+	height: 9px;
+	float:left;
+	margin-top: 19px;
+	margin-left: 25px;
+}
+.mapbindex {
+	background: url('../images/f22.png') no-repeat;
+	width: 657px;
+	height: 9px;
+	float:left;
+	margin-left: 25px;
+}
+
+.msgindex {
+	margin-left: 30px;
+	margin-top: 33px;
+	margin-bottom:10px;
+	color: #fdfdfd; 
+	font-size: 14px;
+	padding-right: 13px;
+}
+
+
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  Show Clubs   ---------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+.mapred {
+	background-color: #313131;
+	height:420px;
+	width: 657px;
+	float:left;
+	margin-left: 25px;
+}
+
+.mapared {
+	background: url('../images/f11.png') no-repeat;
+	width: 657px;
+	height: 9px;
+	float:left;
+	margin-top: 19px;
+	margin-left: 25px;
+}
+.mapbred {
+	background: url('../images/f22.png') no-repeat;
+	width: 657px;
+	height: 9px;
+	float:left;
+	margin-left: 25px;
+}
+
+.red1{
+	width: 155px;
+	height:410px;
+	float:left;
+}
+
+.red2{
+	width: 2px;
+	height:420px;
+	float:left;
+	background-color: #0b2323;
+}
+
+.red3{
+	width: 500px;
+	height:420px;
+	float:left;
+}
+	
+
+.redlogo{
+	width: 139px;
+	height:117px;
+	background: url('../images/logo.png') no-repeat;
+	margin-top: 10px;
+	margin-left: 16px;
+}
+
+.redmenu{
+	width: 155px;
+	height:110px;
+	text-align:right;
+	padding-top:25px;
+}
+
+.redmenu2{
+	margin-top:5px;
+	margin-right: 5px;
+}
+
+.redmenu2 a:link{
+	text-decoration: none;
+	color: #fdfdfd;
+}
+
+.redmenu2 a:visited {
+	text-decoration: none;
+	color: #fdfdfd;
+}
+
+
+.redmenu3{
+	margin-top:5px;
+	margin-right: 5px;
+}
+
+.redmenu3 a:link{
+	text-decoration: none;
+	color: #6fcfcf;
+}
+
+.redmenu3 a:visited {
+	text-decoration: none;
+	color: #6fcfcf;
+}
+
+
+.redsolicitud {
+	margin-top:5px;
+	margin-right: 5px;
+	font-size: 10px;
+	color: #cacaca;
+
+}
+
+.redsolicitudd {
+	margin-top: 40px;
+	margin-left: 20px;
+}
+
+.redsolicituddd {
+	margin-top: 70px;
+	margin-left: 20px;
+}
+
+
+.redsolicituddd a:link{
+	color: #6fcfcf;
+}
+
+.redsolicituddd a:visited {
+	color: #6fcfcf;
+}
+
+.redtexto {
+	background-color: #666666;
+	width: 135px;
+	height: 60px;
+	color: #cacaca;
+	font-size: 10px;
+	border: none;
+	margin-left: -5px;
+	margin-top: 33px;
+}
+
+.redtextoo {
+	font-size: 10px;
+	margin-top: 2px;
+	float: right;
+	border:none;
+	background-color: #313131;
+	color: #fdfdfd;
+}
+
+.redcont1{
+	width: 500px;
+	height:125px;
+}
+
+
+.redcont2{
+	width: 500px;
+	height:240px;
+}
+
+.redcont11{
+	width: 500px;
+	height:98px;
+	margin-top: 25px;
+}
+
+.redcont111{
+	width: 476px;
+	height:2px;
+	background-color: #0b2323;
+	margin-left: 12px;
+}
+
+.redcont11a{
+	color: #fdfdfd;
+	font-size: 40px;
+	margin-left: 15px;
+}
+
+
+.redcont11b{
+	color: #fdfdfd;
+	font-size: 13px;
+	margin-left: 25px;
+}
+
+
+.redfile1{
+	width: 476px;
+	height:9px;
+	margin-left: 12px;
+	background: url('../images/f5.png') no-repeat;
+}
+
+.redfile2{
+	width: 476px;
+	height:245px;
+	margin-left: 12px;
+	background-color: #484848;
+}
+
+
+
+.redfile22{
+	color: #cacaca;
+	font-size: 14px;
+	padding: 15px;
+	overflow: auto;
+	height: 200px;
+}
+
+.redfile22 li {
+	list-style: none;
+	font-size: 12px;
+}
+
+.redfile22 a:link{
+	color: #6fcfcf;
+}
+
+.redfile22 a:visited {
+	color: #6fcfcf;
+}
+
+.redfile22f{
+	color: #cacaca;
+	font-size: 14px;
+	padding: 15px;
+}
+
+.redfile22f li {
+	font-size: 12px;
+	margin-left: 20px;
+}
+
+.redfile22f a:link{
+	color: #6fcfcf;
+}
+
+.redfile22f a:visited {
+	color: #6fcfcf;
+}
+
+.lineff {
+	width: 410px;
+	height: 1px;
+	background-color: #6fcfcf;
+	margin-left: 15px;
+}
+
+.redfile3{
+	width: 476px;
+	height:9px;
+	margin-left: 12px;
+	background: url('../images/f6.png') no-repeat;
+}
+
+
+.redposts {
+	margin-top: 2px;
+	height: 300px;
+	margin-top: 20px;
+}
+
+
+.tabla2 {
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	overflow: auto;
+	height:320px;
+	width: 628px;
+}
+
+.tabla2 th {
+	max-width: 145px;
+	color: #fdfdfd;	
+}
+
+
+.tabla2 td {
+	max-width: 145px;
+	color: #eaede9;
+}
+
+.tabla2 a:link {
+	color: #eaede9;
+}
+
+.tabla2 a:visited {
+	color: #eaede9;
+}
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  Li Notices and board  ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+.redli {
+	color: #cacaca;
+	font-size: 14px;
+	padding: 15px;
+	overflow: auto;
+	margin-top: 15px;
+	height: 110px;
+}
+
+.redli ul {
+	margin-top: -30px;
+}
+
+.redli li {
+	font-size: 12px;
+	margin-left: -55px;
+}
+
+.redli a:link{
+	color: #6fcfcf;
+}
+
+.redli a:visited {
+	color: #6fcfcf;
+}
+
+.linefff {
+	width: 530px;
+	height: 1px;
+	background-color: #6fcfcf;
+	margin-left: -115px;
+}
+
+.redtexto1 {
+	background-color: #666666;
+	width: 425px;
+	height: 30px;
+	color: #cacaca;
+	font-size: 12px;
+	border: none;
+	margin-left: 10px ;
+}
+
+.redtexto2 {
+	font-size: 8px;
+	margin-top: -27px;
+	margin-left: 389px ;
+}
+
+.redtexto11 {
+	background-color: #666666;
+	width: 425px;
+	height: 30px;
+	color: #cacaca;
+	font-size: 12px;
+	border: none;
+	margin-left: 10px;
+	margin-top: 15px;
+}
+
+.redtexto22 {
+	font-size: 8px;
+	margin-top: -27px;
+	margin-left: 389px ;
+}
+
+
+
+
+
+
+
+
+

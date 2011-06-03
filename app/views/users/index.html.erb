@@ -1,0 +1,139 @@
+<div class="pag">
+	<%= will_paginate @users, :previous_label => i_previous, :next_label => i_next %>
+</div>
+
+<div class="f11">
+	<div class="f44a">
+	</div>
+	<div class="f44">
+		<% if cookies[:langu] == "en" %>
+			<div class="msg">Sign in so you can access all data.
+			</div>
+			<%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages', :object => f.object %>
+			<br /><div class="field4">
+				<%= f.label :name %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :name, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :surname %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :surname, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :email %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :email, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :phone %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :phone, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :elo %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :elo, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :password %>
+			</div>
+			<div class="field5"> 
+				<%= f.password_field :password, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :password_confirmation, "Confirmation" %>
+			</div>
+			<div class="field5"> 
+				<%= f.password_field :password_confirmation, :class => "dentr3" %>
+			</div>
+			<div class="actions">
+				<%= f.submit "Record User >>", :class => "actions3"%>
+			</div>
+			<% end %>
+		<% else %>
+			<div class="msg">Registrate y así podrás tener acceso a todos los datos.
+			</div>
+			<%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages', :object => f.object %>
+			<br /><div class="field4">
+				<%= f.label :nombre %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :name, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :apellido %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :surname, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :correo %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :email, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :teléfono %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :phone, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :elo %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :elo, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :contraseña %>
+			</div>
+			<div class="field5"> 
+				<%= f.password_field :password, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :password_confirmation, "Confirmación" %>
+			</div>
+			<div class="field5"> 
+				<%= f.password_field :password_confirmation, :class => "dentr3" %>
+			</div>
+			<div class="actions">
+				<%= f.submit "Registrar Usuario >>", :class => "actions3"%>
+			</div>
+			<% end %>
+		<% end %>
+	</div>
+	<div class="f44b">
+	</div>
+</div>
+
+
+<div class="f22a">
+</div>
+<div class="f22">
+	<br /><%=@list%>
+</div>
+<div class="f22b">
+</div>
+<div class="f33a">
+</div>
+<div class="f33">
+		<ul class="users2">
+			<%= render @users %>
+		</ul>
+</div>
+<div class="f22b">
+</div>
+
+
+
+
+
+

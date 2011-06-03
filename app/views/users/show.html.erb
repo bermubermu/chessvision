@@ -1,0 +1,52 @@
+<div class="pag">
+	<%= will_paginate @bookss, :previous_label => i_previous, :next_label => i_next %>
+</div>
+
+
+<div class="mapa2">
+</div>
+<div class="map2buu">
+			<div class="avatar">
+				<%= gravatar_for @user %>
+			</div>
+			<div class="info2">
+				<%=@name%>: <%= @user.name %><br />
+				<%=@surname%>: <%= @user.surname %><br />
+				<%=@email%>: <%= link_to @user.email, "mailto:@user.email" %><br />
+				<%=@elo%>: <%= @user.elo %><br />
+				<%=@phone%>: <%= @user.phone %><br />
+				<%=@id%>: <%= @user.id %><br />
+				<%=@reg%>: <%= (((((Time.now - @user.created_at).abs)/3600).round)/24) %> <%=@day%>/s
+			</div>
+			<div class="edit2">
+				<%= link_to @edit, edit_user_path(current_user)%>
+			</div>
+</div>
+<div class="mapb2">
+</div>
+<div class="mapa3">
+</div>
+<div class="map3buu">
+	<div class="tablabuu">
+		<table border="1">
+			<tr>
+				<th ><%=@tournament%></th>
+				<th ><%=@site%></th>
+				<th ><%=@player1%></th>
+				<th ><%=@player2%></th>
+				<th ><%=@date%></th>
+				<th ><%=@download%></th>
+			</tr>
+			<%= render @bookss %>
+		</table>
+	</div>
+</div>
+<div class="mapb3">
+</div>
+
+
+
+
+
+
+

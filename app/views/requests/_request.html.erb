@@ -1,0 +1,57 @@
+﻿<li>
+	<div class="lineff">
+	</div>
+	<div class="comentt">
+		<%=request.coment%>
+	</div>		
+	<div class="postea">
+		<%=request.id_usuario%> 
+		<% if cookies[:langu]== "en" %>
+			<% if ((((((Time.now - request.created_at).abs)/3600).round)/24) == 0) %>
+				<% if (((((Time.now - request.created_at).abs)/3600).round) == 0) %>
+					<% if (((((Time.now - request.created_at).abs)/60).round) == 0) %>
+						posted <%= (((Time.now - request.created_at).abs).round) %> second/s ago
+					<% else %>
+						posted <%= ((((Time.now - request.created_at).abs)/60).round) %> minute/s ago
+					<% end %>
+				<% else %>
+					posted <%= ((((Time.now - request.created_at).abs)/3600).round) %> hour/s ago
+				<% end %>
+			<% else %>
+				posted <%= (((((Time.now - request.created_at).abs)/3600).round)/24) %> day/s ago
+			<% end %>
+			<% if current_user.admin? || current_user.id==@club.id_usuario %>
+			  | <%= link_to "Accept", request, :method => :delete, :confirm => "You sure?",
+											:title => "Delete #{request.coment}" %>
+			<% end %>
+			<% if current_user.admin? || current_user.id==@club.id_usuario %>
+			  | <%= link_to "Deny", request, :method => :deletey, :confirm => "You sure?",
+											:title => "Delete #{request.coment}" %>
+			<% end %>
+		<% else %>
+			<% if ((((((Time.now - request.created_at).abs)/3600).round)/24) == 0) %>
+				<% if (((((Time.now - request.created_at).abs)/3600).round) == 0) %>
+					<% if (((((Time.now - request.created_at).abs)/60).round) == 0) %>
+						hace <%= (((Time.now - request.created_at).abs).round) %> segundo/s
+					<% else %>
+						hace <%= ((((Time.now - request.created_at).abs)/60).round) %> minuto/s
+					<% end %>
+				<% else %>
+					hace <%= ((((Time.now - request.created_at).abs)/3600).round) %> hora/s
+				<% end %>
+			<% else %>
+				hace <%= (((((Time.now - request.created_at).abs)/3600).round)/24) %> día/s
+			<% end %>
+			<% if current_user.admin? || current_user.id==@club.id_usuario %>
+			  | <%= link_to "Aceptar", request, :method => :delete, :confirm => "¿Estás seguro?",
+											:title => "Delete #{request.coment}" %>
+			<% end %>
+			<% if current_user.admin? || current_user.id==@club.id_usuario %>
+			  | <%= link_to "Rechazar", request, :method => :deletey, :confirm => "¿Estás seguro?",
+											:title => "Delete #{request.coment}" %>
+			<% end %>
+		<% end %>
+	</div>
+</li>
+
+

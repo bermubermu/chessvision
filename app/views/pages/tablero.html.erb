@@ -1,0 +1,58 @@
+<script>
+var pgnViewer = new PgnViewer({ 
+	boardName: "demo",
+	highlightFromTo: true,
+	showCoordinates: true,
+	movesFormat: "main_on_own_line",
+	autoScrollMoves: true,
+	hideBracketsOnTopLevelVariation: true,
+	moveAnimationLength: 0.3,
+	newlineForEachMainMove: false,
+	pieceSet: 'case', 
+	pieceSize: 40});
+
+insertPGN = function()
+{
+   var formObject = YAHOO.util.Dom.get("pgnStringForm");
+   var textArea = formObject["pgn"];
+   if (textArea)
+   {
+       var p = textArea.value;
+       if (p && p.length>0)
+           pgnViewer.setupFromPgn(p);
+   }
+};
+
+YAHOO.util.Event.addListener("insertPGN", "click", insertPGN);
+YAHOO.util.Dom.setStyle("uploadPGN","cursor","pointer");
+
+</script>
+
+
+<div class="f1">
+	<div class="f3at">
+	</div>
+	<div class="f3t">
+		<div class="f3tt">
+			<div id="demo-container"></div>
+		</div>
+	</div>
+	<div class="f2b">
+	</div>
+</div>
+<div class="f4a">
+</div>
+<div class="f4">
+		<form id="pgnStringForm" method="POST" encType="multipart/form-data">
+		     <textarea id="pgnStringForm2" rows="4" cols="45" name="pgn"></textarea>
+		     <br/>
+		     <span id="insertPGN" title="Load PGN" class="button2"><%= @cargar %> >> </span>
+		     <!-- <input type="submit" name="submit" value="Submit" > -->
+		</form>
+	<div class="moves"> 
+		<div id="demo-moves"></div>
+	</div>
+</div>
+<div class="f4b">
+</div>
+

@@ -1,0 +1,171 @@
+<div class="mapaindex">
+</div>
+<div class="mapindex">
+	<% if cookies[:langu] == "en" %>
+		<div class="msgindex">Edit your Tournament.
+		</div>
+		  <br /><br /><%= form_for(@tournament, :html => { :multipart => true }) do |f| %>
+		  <%= render 'shared/error_messages2', :object => f.object %>
+		  <div class="field1">
+		    <%= f.label :name%>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :name, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+				Kind
+		  </div>
+                  <div class="field3">
+				<select name=tournament[kind] class="langu" >
+					<option> Tournament
+					<option> League
+				</select> 
+		  </div>
+		  <div class="field1">
+		    <%= f.label :players %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :number_players, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :rounds %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :number_rounds, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :country %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :country, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :city %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :city, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :club %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :organizador, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :email %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :email, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :url %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :url, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+				Visibility
+		  </div>
+                  <div class="field3">
+				<select name=tournament[visible] class="langu" >
+					<option> public
+					<option> private
+				</select> 
+		  </div>
+		    <div class="field111T">
+		    <br /><br /><br /><%= f.label :informacion %>
+		  </div>
+		  <div class="field2T">
+		    <br /><%= f.text_area :information, :class => "textoTour"%>
+		  </div>
+		    <div class="actions">
+		    <%= f.submit "Record Torneo >>", :class => "actions5T"%>
+		  </div>
+		<% end %>
+	<% else %>
+		<div class="msgindex">Edita tu Torneo.
+		</div>
+		  <br /><br /><%= form_for(@tournament, :html => { :multipart => true }) do |f| %>
+		  <%= render 'shared/error_messages2', :object => f.object %>
+		  <div class="field1">
+		    <%= f.label :nombre%>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :name, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+				Tipo
+		  </div>
+                  <div class="field3">
+				<select name=tournament[kind] class="langu" >
+					<option> Torneo
+					<option> Liga
+				</select> 
+		  </div>
+		  <div class="field1">
+		    <%= f.label :jugadores %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :number_players, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :rondas %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :number_rounds, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :pais %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :country, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :ciudad %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :city, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :club %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :organizador, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :email %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :email, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :url %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :url, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+				Visibilidad
+		  </div>
+                  <div class="field3">
+				<select name=tournament[visible] class="langu" >
+					<option> publico
+					<option> privado
+				</select> 
+		  </div>
+		    <div class="field111T">
+		    <br /><br /><br /><%= f.label :informacion %>
+		  </div>
+		  <div class="field2T">
+		    <br /><%= f.text_area :information, :class => "textoTour"%>
+		  </div>
+		    <div class="actions">
+		    <%= f.submit "Grabar Torneo >>", :class => "actions5T"%>
+		  </div>
+		<% end %>
+	<% end %>
+</div>
+<div class="mapbindex">
+</div>
+		
+

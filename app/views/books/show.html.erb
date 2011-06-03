@@ -1,0 +1,64 @@
+<div class="pag">
+	<%= will_paginate @micropostss, :class => 'paginationpost', :previous_label => i_previous, :next_label => i_next %>
+</div>
+
+
+
+
+
+<div class="f1">
+	<div class="f2a">
+	</div>
+	<div class="f222">
+		<%= @book.event %> 
+	</div>
+	<div class="f2b">
+	</div>
+	<div class="f3a">
+	</div>
+	<div class="f3">
+		<div class="info">
+			<%=@event%>: <%= @book.event %><br />
+			<%=@site%>: <%= @book.site %><br />
+			<%=@round%>: <%= @book.round %><br />
+			<%=@white%>: <%= @book.white %> (ELO: <%= @book.elo_white %>)<br />
+			<%=@black%>: <%= @book.black %> (ELO: <%= @book.elo_black %>)<br />
+			<%=@eco%>: <%= @book.result %><br />
+			<%=@date%>: <%= @book.date %><br />
+			<%=@result%>: <%= @book.result %><br />
+			<%=@user%>: <%= link_to @user_book.name, @user_book %><br />
+			<%=@upd%>: <%= (((((Time.now - @book.created_at).abs)/3600).round)/24) %> <%=@day%>/s<br />
+		</div>
+		<div class="file1">
+			<%= link_to_if(@book.attachment?, i_libro, @book.attachment_url) %><br />
+		</div>
+		<div class="file2">
+			<%= link_to_if(@book.attachment?, @down, @book.attachment_url) %>
+		</div>
+		<% if current_user.admin? || current_user.id==@book.id_usuario %>
+			<div class="editbook">
+				<%= link_to @edit, edit_book_path %>
+			</div>
+		<% end %>
+	</div>
+	<div class="f2b">
+	</div>
+</div>
+<div class="f4a">
+</div>
+<div class="f4">
+	<div class="msg"><%=@msg%>
+	</div>
+	<%= render 'shared/micropost_form' %>
+	<ul class="posts">
+	<div class="posts2">
+		<%= render @micropostss %><br />
+		<div class="line2"></div>
+	</div>
+	</ul>
+</div>
+<div class="f4b">
+</div>
+
+
+

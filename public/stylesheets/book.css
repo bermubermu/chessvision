@@ -1,0 +1,680 @@
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  Index Books   --------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.pag {
+	float:right;
+	margin-right: 45px;
+	margin-top: -28px;
+	color: #6fcfcf;
+	font-size: 11.5px;
+}
+
+.pag a:link{
+	text-decoration: none;
+	color: #fdfdfd;
+}
+
+.pag a:visited {
+	text-decoration: none;
+	color: #fdfdfd;
+}
+
+.f1{
+	width: 356px;
+	float:left;
+	margin-left: 21.5px;
+	margin-top: 19px;
+}
+
+.f2a {
+	background: url('../images/f1.png') no-repeat;
+	width: 356px;
+	height: 9px;
+	float:left;
+}
+
+.f2b {
+	background: url('../images/f2.png') no-repeat;
+	width: 356px;
+	height: 9px;
+	float:left;
+}
+
+.f2 {
+	background-color: #313131;
+	width: 356px;
+	height: 55px;
+	float:left;
+}
+
+.f3a {
+	background: url('../images/f1.png') no-repeat;
+	width: 356px;
+	height: 9px;
+	float:left;
+	margin-top: 9px;
+}
+
+.f3 {
+	background-color: #313131;
+	width: 356px;
+	height: 338px;
+	float: left;
+	
+}
+
+.f3t {
+	background-color: #313131;
+	width: 356px;
+	height: 420px;
+	float: left;
+	
+}
+
+.f3tt {
+	width: 356px;
+	height: 338px;
+	margin-top: 5px;
+}
+
+.f3at {
+	background: url('../images/f1.png') no-repeat;
+	width: 356px;
+	height: 9px;
+	float:left;
+}
+
+.f3c{
+	width: 350px;
+	height: 338px;
+	overflow: auto;
+}
+
+.f4a {
+	background: url('../images/f3.png') no-repeat;
+	width: 299px;
+	height: 9px;
+	float:left;
+	margin-top: 19px;
+	margin-left: 9px;
+}
+
+.f4 {
+	background-color: #313131;
+	width: 299px;
+	height: 420px;
+	float:left;
+	margin-left: 9px;
+}
+
+.f4b {
+	background: url('../images/f4.png') no-repeat;
+	width: 299px;
+	height: 9px;
+	float:left;
+	margin-left: 9px;
+}
+
+.users2 {
+	margin-top: 2px;
+}
+
+.users2 li {
+	list-style: none;
+	margin-bottom: -14px;
+	font-size: 12px;
+	color: #cacaca;
+}
+
+.users2 a:link {
+	color: #eaede9;
+}
+
+.users2 a:visited {
+	color: #eaede9;
+}
+
+.t1 {
+	float:left;
+	font-size: 9px;
+	text-align:center;
+	color: #6fcfcf;
+	margin-left: 10px;
+	margin-top: -15px;
+}
+
+.t2 {
+	float:left;
+	font-size: 9px;
+	text-align:center;
+	color: #6fcfcf;
+	margin-left: 30px;
+	margin-top: -15px;
+}
+
+.t3 {
+	margin-top: 25px;
+	margin-left: 25px;
+	float:left;
+	color: #6fcfcf;
+}
+
+.tregister {
+	float:left;
+	font-size: 15px;
+	text-align:center;
+	color: #6fcfcf;
+	margin-left: 260px;
+	margin-top: 3px;
+}
+
+.tregister a:link {
+	color: #fdfdfd;	
+}
+
+.tregister a:visited {
+	color: #fdfdfd;	
+}
+
+.topic {
+	background-color: #666666;
+	color: #cacaca;
+	width:210px;
+	border: none;
+	margin-top:3px;
+	height:18px;
+}
+
+.langu {
+	background-color: #666666;
+	color: #cacaca;
+	width:210px;
+	border: none;
+	margin-top:3px;
+	height:18px;
+}
+
+.actions2 {
+	margin-top: 120px;
+	background-color: #313131;
+	border:none;
+	color: #cacaca;
+	font-size: 13px;
+	float:right;
+	margin-right: 50px;
+}
+
+.map2 {
+	background-color: #313131;
+	height:20px;
+	width: 621px;
+	float:left;
+	margin-left: 25px;
+	padding:18px;
+}
+
+.mapa2 {
+	background: url('../images/f11.png') no-repeat;
+	width: 657px;
+	height: 9px;
+	float:left;
+	margin-top: 19px;
+	margin-left: 25px;
+}
+
+.mapb2 {
+	background: url('../images/f22.png') no-repeat;
+	width: 657px;
+	height: 9px;
+	float:left;
+	margin-left: 25px;
+}
+
+
+.mapa3 {
+	background: url('../images/f11.png') no-repeat;
+	width: 657px;
+	height: 9px;
+	float:left;
+	margin-top: 9px;
+	margin-left: 25px;
+}
+
+.map3 {
+	background-color: #313131;
+	height:336px;
+	width: 658px;
+	float:left;
+	margin-left: 25px;
+	padding-top: -18px;	
+
+}
+
+.map2bu {
+	background-color: #313131;
+	height:80px;
+	width: 621px;
+	float:left;
+	margin-left: 25px;
+	padding:18px;
+}
+.map3bu {
+	background-color: #313131;
+	height:276px;
+	width: 658px;
+	float:left;
+	margin-left: 25px;
+	padding-top: -18px;	
+
+}
+
+.map2buu {
+	background-color: #313131;
+	height:150px;
+	width: 621px;
+	float:left;
+	margin-left: 25px;
+	padding:18px;
+}
+.map3buu {
+	background-color: #313131;
+	height:206px;
+	width: 658px;
+	float:left;
+	margin-left: 25px;
+	padding-top: -18px;	
+
+}
+
+
+.map31 {
+	height:336px;
+	width: 652px;
+	overflow: auto;
+}
+
+.mapb3 {
+	background: url('../images/f22.png') no-repeat;
+	width: 657px;
+	height: 9px;
+	float:left;
+	margin-left: 25px;
+}
+
+
+
+.tabla {
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	overflow: auto;
+	height:320px;
+	width: 628px;
+}
+
+table {
+	font-size: 11px;
+
+}
+
+.tabla th {
+	min-width: 95px;
+	max-width: 95px;
+	color: #fdfdfd;	
+}
+
+
+.tabla td {
+	min-width: 95px;
+	max-width: 95px;
+	color: #eaede9;
+}
+
+.tabla a:link {
+	color: #eaede9;
+}
+
+.tabla a:visited {
+	color: #eaede9;
+}
+
+.tablabu {
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	overflow: auto;
+	height:260px;
+	width: 628px;
+}
+
+.tablabu th {
+	min-width: 95px;
+	max-width: 95px;
+	color: #fdfdfd;	
+}
+
+
+.tablabu td {
+	min-width: 95px;
+	max-width: 95px;
+	color: #eaede9;
+}
+
+.tablabu a:link {
+	color: #eaede9;
+}
+
+.tablabu a:visited {
+	color: #eaede9;
+}
+
+.tablabuu {
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	overflow: auto;
+	height:192px;
+	width: 628px;
+}
+
+.tablabuu th {
+	min-width: 95px;
+	max-width: 95px;
+	color: #fdfdfd;	
+}
+
+
+.tablabuu td {
+	min-width: 95px;
+	max-width: 95px;
+	color: #eaede9;
+}
+
+.tablabuu a:link {
+	color: #eaede9;
+}
+
+.tablabuu a:visited {
+	color: #eaede9;
+}
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  New Books   ---------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.field1 {
+	float:left;
+	width: 88px;
+	color: #cacaca;
+	font-size: 11px;
+	margin-top: 4px;
+	margin-right: 7px;
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+.field2 {
+	float:left;
+	width: 200px;
+	margin-bottom: 5px;
+}
+
+.field3 {
+	width: 200px;
+	float:left;
+	margin-bottom: 5px;
+}
+
+.dentr {
+	background-color: #666666;
+	width: 210px;
+	height: 14.5px;
+	color: #cacaca;
+	font-size: 11px;
+	border: none;
+}
+.dentr2 {
+	background-color: #666666;
+	width: 210px;
+	height: 21px;
+	color: #cacaca;
+	font-size: 10.5px;
+	border: none;
+	margin-top: -1px;
+}
+
+.textoo {
+	background-color: #666666;
+	width: 505px;
+	height: 60px;
+	color: #cacaca;
+	font-size: 11px;
+	border: none;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.field111 {
+	float:left;
+	width: 88px;
+	color: #cacaca;
+	font-size: 11px;
+	margin-bottom: 5px;
+}
+
+.msg4 {
+	margin-left: 222px;
+	margin-top: 6px;
+	margin-bottom:10px;
+	color: #6fcfcf;
+	font-size: 16px;
+	padding-right: 13px;
+}
+
+.msg5 {
+	margin-left: 50px;
+	margin-top: 20px;
+	margin-bottom:10px;
+	padding-right: 13px;
+}
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  Show Books   ---------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.file1 {
+	text-align: right;
+	margin-right: 15px;
+	margin-top: -70px;
+}
+
+.file2 {
+	text-align: right;
+	margin-right: 26px;
+	margin-top: -5px;
+}
+
+.file2 a:link{
+	color: #6fcfcf;
+	font-size: 14px;	
+}
+.file2 a:visited {
+	color: #6fcfcf;
+	font-size: 14px;
+}
+
+.editbook {
+	margin-top: 60px;
+	text-align: center;
+}
+
+.editbook a:link{
+	color: #cacaca;
+	font-size: 14px;	
+}
+.editbook a:visited {
+	color: #cacaca;
+	font-size: 14px;
+}
+
+.f222 {
+	background-color: #313131;
+	width: 356px;
+	height: 35px;
+	float:left;
+	color: #6fcfcf;
+	text-align: center;
+	font-size: 20px;
+	padding-top: 20px;
+}
+
+
+.posts {
+	margin-top: 2px;
+	overflow: auto;
+	height: 300px;
+	margin-top: 20px;
+}
+
+.posts2{
+	margin-top:-19px;
+}
+
+
+.posts li {
+	list-style: none;
+	margin-bottom: -14px;
+	font-size: 12px;
+	color: #cacaca;
+	margin-left: -40px;
+}
+
+
+.line {
+	width: 269px;
+	height: 1px;
+	background-color: #6fcfcf;
+	margin-left: 15px;
+}
+
+.line2 {
+	width: 269px;
+	height: 1px;
+	background-color: #6fcfcf;
+	margin-left: -25px;
+}
+
+.comentt {
+	margin-left: 20px;
+	margin-top: 3px;
+	padding-right: 20px;
+}
+
+.postea {
+	margin-left: 20px;
+	font-size: 9px;
+	padding-right: 20px;
+}
+
+.postea a:link {
+	color: #6fcfcf;
+}
+
+.postea a:visited {
+	color: #6fcfcf;
+}
+
+.field6{
+	margin-top: -40px;
+}
+
+.textoo2 {
+	background-color: #666666;
+	width: 269px;
+	height: 30px;
+	color: #cacaca;
+	font-size: 12px;
+	border: none;
+	margin-left: 15px ;
+}
+
+.textoo3 {
+	font-size: 8px;
+	margin-top: -27px;
+	margin-left: 238px ;
+}
+
+#pgnStringForm2 {
+	border: none;
+	height: 52px;
+	width: 275px;
+	margin-left: 12px;
+	margin-top: 11px;
+	background-color: #666666;
+	color: #cacaca;
+}
+
+.button2 {
+	font-size: 12px;
+	color: #cacaca;
+	margin-top: -50px;
+	margin-left: 190px;
+}
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  Edit Book ------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.file3 {
+	text-align: center;
+	margin-top: 60px;
+}
+
+.file4 {
+	text-align: center;
+	margin-top: 7px;
+}
+
+.file4 a:link{
+	color: #6fcfcf;
+	font-size: 14px;	
+}
+.file4 a:visited {
+	color: #6fcfcf;
+	font-size: 14px;
+}
+
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  Search ----------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.actions4 {
+	margin-top: 50px;
+	font-size: 13px;
+	margin-left: 120px ;
+}
+
+.actions4s {
+	margin-top: 10px;
+	font-size: 13px;
+	margin-left: 170px ;
+}
+
+
+

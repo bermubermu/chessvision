@@ -1,0 +1,147 @@
+<div class="f11">
+	<div class="f44a">
+	</div>
+	<div class="f44">
+			<br /><br /><div class="avatar">
+				<%= gravatar_for @user %>
+			</div>
+			<div class="info">
+				<%=@name%>: <%= @user.name %><br />
+				<%=@surname%>: <%= @user.surname %><br />
+				<%=@email%>: <%= link_to @user.email, "mailto:@user.email" %><br />
+				<%=@elo%>: <%= @user.elo %><br />
+				<%=@phone%>: <%= @user.phone %><br />
+				<%=@id%>: <%= @user.id %><br />
+				<%=@reg%>: <%= (((((Time.now - @user.created_at).abs)/3600).round)/24) %> <%=@day%>/s
+			</div>
+	</div>
+	<div class="f44b">
+	</div>
+</div>
+
+
+<div class="f22a">
+</div>
+<div class="f22">
+	<br /><%=@edit%>
+</div>
+<div class="f22b">
+</div>
+<div class="f33a">
+</div>
+<div class="f33">
+	<% if cookies[:langu] == "en" %>
+		<%= form_for(@user) do |f| %>
+		  <%= render 'shared/error_messages', :object => f.object %>
+			<div class="field4">
+				<%= f.label :name %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :name, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :surname %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :surname, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :email %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :email, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :phone %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :phone, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :elo %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :elo, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :password %>
+			</div>
+			<div class="field5"> 
+				<%= f.password_field :password, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :password_confirmation, "Password confirmation" %>
+			</div>
+			<div class="field5"> 
+				<%= f.password_field :password_confirmation, :class => "dentr3" %>
+			</div>
+			<div class="actions">
+				<%= f.submit "Update User >>", :class => "actions3"%>
+			</div>
+			<div class="grav">
+				<%= gravatar_for @user, :size => 80 %>
+				<a href="http://gravatar.com/emails"><br />Change</a>
+			</div>
+		<% end %>
+	<% else %>
+		<%= form_for(@user) do |f| %>
+		  <%= render 'shared/error_messages', :object => f.object %>
+			<div class="field4">
+				<%= f.label :nombre %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :name, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :apellidos %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :surname, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :correo %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :email, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :telefono %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :phone, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :elo %>
+			</div>
+			<div class="field5"> 
+				<%= f.text_field :elo, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :contraseña %>
+			</div>
+			<div class="field5"> 
+				<%= f.password_field :password, :class => "dentr3" %>
+			</div>
+			<div class="field4">
+				<%= f.label :password_confirmation, "Confirmacion" %>
+			</div>
+			<div class="field5"> 
+				<%= f.password_field :password_confirmation, :class => "dentr3" %>
+			</div>
+			<div class="actions">
+				<%= f.submit "Actualizar Usuario >>", :class => "actions3"%>
+			</div>
+			<div class="grav">
+				<%= gravatar_for @user, :size => 80 %>
+				<a href="http://gravatar.com/emails"><br />Cambiar</a>
+			</div>
+		<% end %>
+	<% end %>
+</div>
+<div class="f22b">
+</div>
+
+
+
+
+

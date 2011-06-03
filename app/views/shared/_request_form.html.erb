@@ -1,0 +1,18 @@
+﻿<%= form_for @request do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field6">
+    <%= f.text_area :coment, :class => "post", :class => "redtexto"%>
+  </div>
+  <div class="field7">
+		<% if cookies[:langu]== "en" %>
+			<%= f.submit "Submit Request >>", :class => "redtextoo" %>
+		<% else %>
+			<%= f.submit "Enviar Solicitud >>", :class => "redtextoo" %>
+		<% end %>
+  </div>
+<% end %>
+
+
+
+
+

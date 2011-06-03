@@ -1,0 +1,22 @@
+﻿<% if object.errors.any? %>
+	<% if cookies[:langu] == "en" %>
+		<div id="error_explanation">
+			<h2><%= pluralize(object.errors.count, "error") %> 
+			produced:</h2>
+			<p>Fields can not be blank. There are problems in the following fields:</p>
+			<ul>
+			</ul>
+		</div>
+	<% else %>
+		<div id="error_explanation">
+			<h2><%= pluralize(object.errors.count, "errore") %> 
+			producidos:</h2>
+			<p>Hay problemas en los siguientes campos:</p>
+			<ul>
+				<% object.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+<% end %>

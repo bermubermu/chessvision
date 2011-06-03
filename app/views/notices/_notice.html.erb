@@ -1,0 +1,49 @@
+﻿<li>
+	<div class="linefff">
+	</div>
+	<div class="comentt">
+		<%=notice.coment%>
+	</div>		
+	<div class="postea">
+		<% if cookies[:langu]== "en" %>
+			<% if ((((((Time.now - notice.created_at).abs)/3600).round)/24) == 0) %>
+				<% if (((((Time.now - notice.created_at).abs)/3600).round) == 0) %>
+					<% if (((((Time.now - notice.created_at).abs)/60).round) == 0) %>
+						posted <%= (((Time.now - notice.created_at).abs).round) %> second/s ago
+					<% else %>
+						posted <%= ((((Time.now - notice.created_at).abs)/60).round) %> minute/s ago
+					<% end %>
+				<% else %>
+					posted <%= ((((Time.now - notice.created_at).abs)/3600).round) %> hour/s ago
+				<% end %>
+			<% else %>
+				posted <%= (((((Time.now - notice.created_at).abs)/3600).round)/24) %> day/s ago
+			<% end %>
+			<% if current_user.admin? || current_user.id==notice.id_usuario2 %>
+			  | <%= link_to "delete", notice, :method => :delete, :confirm => "You sure?",
+											:title => "Delete #{notice.coment}" %>
+			<% end %>
+		<% else %>
+			<% if ((((((Time.now - notice.created_at).abs)/3600).round)/24) == 0) %>
+				<% if (((((Time.now - notice.created_at).abs)/3600).round) == 0) %>
+					<% if (((((Time.now - notice.created_at).abs)/60).round) == 0) %>
+						hace <%= (((Time.now - notice.created_at).abs).round) %> segundo/s
+					<% else %>
+						hace <%= ((((Time.now - notice.created_at).abs)/60).round) %> minuto/s
+					<% end %>
+				<% else %>
+					hace <%= ((((Time.now - notice.created_at).abs)/3600).round) %> hora/s
+				<% end %>
+			<% else %>
+				hace <%= (((((Time.now - notice.created_at).abs)/3600).round)/24) %> día/s
+			<% end %>
+			<% if current_user.admin? || current_user.id==notice.id_usuario2 %>
+			  | <%= link_to "delete", notice, :method => :delete, :confirm => "¿Estás seguro?",
+											:title => "Delete #{notice.coment}" %>
+			<% end %>
+		<% end %>
+	</div>
+</li>
+
+
+

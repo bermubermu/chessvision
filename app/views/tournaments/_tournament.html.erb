@@ -1,0 +1,19 @@
+<tr>
+	<td><%= link_to tournament.name, tournament %></td>
+	<td><%=tournament.number_players%></td>
+	<td><%=tournament.number_rounds%></td>
+	<td><%=tournament.city%>(<%=tournament.country%>)</td>
+	<% if cookies[:langu]== "en" %>
+		<% if tournament.kind=="Liga" || tournament.kind=="League" %>
+			<td>League</td>
+		<% else %>
+			<td>Tournament</td>
+		<% end %>
+	<% else %>
+		<% if tournament.kind=="Liga" || tournament.kind=="League" %>
+			<td>Liga</td>
+		<% else %>
+			<td>Torneo</td>
+		<% end %>
+	<% end %>
+</tr>

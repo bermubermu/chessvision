@@ -1,0 +1,142 @@
+<div class="pag">
+
+</div>	
+
+
+<div class="mapared">
+</div>
+<div class="mapred">
+
+	<div class="red1">
+		<div class="redlogo2">
+		</div>
+		<div class="redmenu">
+			<div class="redmenu2">			
+				<%= link_to @information, @tournament %>
+			</div>
+			<% if @add2 =="tres"%>
+				<div class="redmenu2">
+					<%=@classi%>
+				</div>
+				<div class="redmenu3">
+					<%=@vs%>
+				</div>
+				<div class="redmenu2">
+					<%=@play%>
+				</div>
+			<% else %>
+				<div class="redmenu2">					
+					<%= link_to @classi, classification_path %>
+				</div>
+				<div class="redmenu3">
+					<%= link_to @vs, versus_path %>
+				</div>
+				<div class="redmenu2">
+					<%= link_to @play, participants_path %>
+				</div>
+			<% end %>
+
+			<% if @add2 == "dos" || current_user.admin? %>
+				<div class="redmenu2">
+					<br /><br /><% if cookies[:langu]== "en" %>
+						<%= link_to "Delete Tournament", @tournament, :method => :delete, :confirm => "You sure?",
+										:title => "Delete #{@tournament.name}" %>
+					<% else %>
+						<%= link_to "Eliminar Torneo", @tournament, :method => :delete, :confirm => "¿Estás seguro?", :title => "Delete #{@tournament.name}" %>
+					<% end %>
+					
+				</div>
+			<% end %>
+		</div>
+
+		<% if cookies[:langu]== "en" %>
+			<% if @add2 == "uno" && !current_user.admin?%>
+				<div class="redsolicitud">
+					<div class="redsolicituddd"> 
+						Welcome, <%= link_to current_user.name, current_user %><br /> Here you will find 
+						information about this tournament and have access to all areas.
+					</div>
+				</div>
+			<% end %>
+			<% if @add2 =="tres"%>
+				<div class="redsolicitud">
+					<div class="redsolicitudd">
+						Sign up to access all areas
+						<%= render 'shared/player_form' %>
+					</div>
+				</div>
+			<% end %>
+
+		<% else %>
+			<% if @add2 == "uno" && !current_user.admin?%>
+				<div class="redsolicitud">
+					<div class="redsolicituddd"> 
+						Bienvenido, <%= link_to current_user.name, current_user %><br /> Aquí podrás 
+						encontrar información sobre este torneo y tener acceso a todas las áreas.
+					</div>
+				</div>
+			<% end %>
+			<% if @add2 =="tres"%>
+				<div class="redsolicitud">
+					<div class="redsolicitudd">
+						Inscribite para tener acceso a todas las áreas
+						<%= render 'shared/player_form' %>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+
+
+	</div>	
+	<div class="red2">
+	</div>	
+	<div class="red3">
+			<div class="redcont1">
+				<div class="redcont11">
+					<div class="redcont11a">
+						<% if cookies[:langu]== "en" %>
+							<% if @tournament.kind=="Liga" || @tournament.kind=="League" %>
+								League <%= @tournament.name %>
+							<% else %>
+								Tournament <%= @tournament.name %>
+							<% end %>
+						<% else %>
+							<% if @tournament.kind=="Liga" || @tournament.kind=="League" %>
+								Liga <%= @tournament.name %>
+							<% else %>
+								Torneo <%= @tournament.name %>
+							<% end %>
+						<% end %>
+					</div>
+					<div class="redcont11b">
+						<%= @tournament.country %> (<%= @tournament.city %>)
+					</div>
+				</div>
+				<div class="redcont111">
+				</div>
+			</div>
+			<div class="redcont2">
+				<div class="redfile1">
+				</div>
+				<div class="redfile2">
+					<div class="redfile22table">
+						<table border="0">
+							<tr>
+								<% if @tournament.kind!="League" && @tournament.kind!="Liga" %>
+									<th ><%=@round%> </th>
+								<% end %>
+								<th ><%=@user1%> </th>
+								<th ><%=@user2%> </th>
+								<th ><%=@result%> </th>
+							</tr>
+							<%= render @battlesend %>
+						</table>
+					</div>
+				</div>
+				<div class="redfile3">
+				</div>
+			</div>
+	</div>	
+</div>
+<div class="mapbred">
+</div>

@@ -1,0 +1,18 @@
+﻿<li>
+  <% if signed_in? %>
+		<% if cookies[:langu]== "en" %>
+<%= link_to player.id_usuario, users_path %> - <%= player.score %> point/s
+			<% if current_user.admin? || current_user.id==@tournament.id_usuario %>
+			  | <%= link_to "delete", player, :method => :delete, :confirm => "You sure?",
+											:title => "Delete #{player.id_usuario}" %>
+			<% end %>
+		<% else %>
+<%= link_to player.id_usuario, users_path %> - <%= player.score %> punto/s
+			<% if current_user.admin? || current_user.id==@tournament.id_usuario %>
+			  | <%= link_to "eliminar", player, :method => :delete, :confirm => "¿Estás seguro?",
+											:title => "Delete #{player.id_usuario}" %>
+			<% end %>
+		<% end %>
+  <% end %>
+</li>
+

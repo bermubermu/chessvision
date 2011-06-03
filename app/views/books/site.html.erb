@@ -1,0 +1,51 @@
+<div class ="pag">
+  <% letter_options.each do |letter| %>
+    <% if params[:letter] == letter %>
+      <span class="current"><%= letter %></span>
+    <% else %>
+      <%= link_to letter, site_path(:letter => letter)%>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="mapa2">
+</div>
+<div class="map2">
+	<div class="t2">
+		<%=@news%><br /><%= link_to i_button1, books_path %>
+	</div>
+	<div class="t1">
+		<%=@event%><br /><%= link_to i_button1, event_path %> 
+	</div>
+	<div class="t1">
+		<%=@site%><br /><%= link_to i_button2, site_path %> 
+	</div>
+	<div class="t1">
+		<%=@date%><br /><%= link_to i_button1, date_path %> 
+	</div>
+	<div class="tregister">
+		<%= link_to @register, new_book_path %> 
+	</div>
+</div>
+<div class="mapb2">
+</div>
+<div class="mapa3">
+</div>
+<div class="map3">
+	<div class="tabla">
+		<table border="1">
+			<tr>
+				<th >Torneo</th>
+				<th >Lugar</th>
+				<th >Jugador 1</th>
+				<th >Jugador 2</th>
+				<th >Fecha</th>
+				<th >Descargar</th>
+			</tr>
+			<%= render @data %>
+		</table>
+	</div>
+</div>
+<div class="mapb3">
+</div>
+

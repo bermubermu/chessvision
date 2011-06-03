@@ -1,0 +1,15 @@
+<tr>
+	<td><%= link_to book.event, book %></td>
+	<td><%=book.site%></td>
+	<td><%=book.white%></td>
+	<td><%=book.black%></td>
+	<td><%=book.date%></td>
+	<td><%= link_to_if(book.attachment?, "PGN", book.attachment_url) %>
+	  <% if signed_in? %>
+		  <% if current_user.id==book.id_usuario || current_user.admin? %>
+		  (<%= link_to "delete", book, :method => :delete, :confirm => @areyousure,
+										:title => "Delete #{book.event}" %>)
+		  <% end %>
+	  <% end %>
+	</td>
+</tr>

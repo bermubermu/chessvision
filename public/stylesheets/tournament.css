@@ -1,0 +1,256 @@
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  Show   --------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.redlogo2{
+	width: 139px;
+	height:117px;
+	background: url('../images/logo2.png') no-repeat;
+	margin-top: 10px;
+	margin-left: 16px;
+}
+
+
+.redfile22men{
+	width:150px;
+	color: #cacaca;
+	font-size: 22px;
+	margin-top:-200px;
+	margin-left:330px;
+}
+
+.redfile22men2{
+	width:150px;
+	color: #cacaca;
+	font-size: 22px;
+	margin-top:-200px;
+	margin-left:300px;
+}
+
+.msgindex2 {
+	margin-left: 465px;
+	margin-top: 33px;
+	margin-bottom:10px;
+	color: #6fcfcf;
+	font-size: 14px;
+	padding-right: 13px;
+}
+
+.msgindex2 a:link{
+	color: #6fcfcf;
+}
+
+.msgindex2 a:visited {
+	color: #6fcfcf;
+}
+
+.msgindex3 {
+	margin-left: 195px;
+	margin-top: 53px;
+	margin-bottom:10px;
+	color: #6fcfcf;
+	font-size: 14px;
+	padding-right: 13px;
+}
+
+.msgindex3 a:link{
+	color: #6fcfcf;
+}
+
+.msgindex3 a:visited {
+	color: #6fcfcf;
+}
+
+
+.tabla3 {
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	overflow: auto;
+	height:320px;
+	width: 628px;
+}
+
+.tabla3 th {
+	min-width: 115px;
+	max-width: 115px;
+	color: #fdfdfd;	
+}
+
+
+.tabla3 td {
+	min-width: 115px;
+	max-width: 115px;
+	color: #eaede9;
+}
+
+.tabla3 a:link {
+	color: #eaede9;
+}
+
+.tabla3 a:visited {
+	color: #eaede9;
+}
+
+
+.tregister2t {
+	float:left;
+	font-size: 15px;
+	text-align:center;
+	color: #6fcfcf;
+	margin-left: 230px;
+	margin-top: 3px;
+}
+
+.tregister2t a:link {
+	color: #fdfdfd;	
+}
+
+.tregister2t a:visited {
+	color: #fdfdfd;	
+}
+
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  Classification   --------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.informat{
+	color: #eaede9;
+	font-size:12px;
+	margin-top:100px;
+	margin-left:50px;
+}
+
+.redfile22z{
+	color: #cacaca;
+	font-size: 14px;
+	padding: 15px;
+}
+
+.redfile22z ol {
+	list-style:decimal;
+	margin-top: -0.5px;
+	margin-left: -10px;
+}
+
+.redfile22z li {
+	font-size: 12px;
+	margin-left: 20px;
+}
+
+.redfile22z a:link{
+	color: #6fcfcf;
+}
+
+.redfile22z a:visited {
+	color: #6fcfcf;
+}
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  Battle   --------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+.redfile22table {
+	width: 455px;
+	height: 245px;
+	padding-left: 15px;
+	padding-top: 5px;
+	overflow: auto;
+}
+
+.redfile22table tr {
+
+}
+
+.redfile22table th {
+
+	min-width: 90px;	
+	max-width: 90px;
+	color: #fdfdfd;	
+}
+
+
+.redfile22table td {
+
+	text-align:center;
+	min-width: 90px;	
+	max-width: 90px;
+	color: #eaede9;
+}
+
+.redfile22table a:link {
+	color: #eaede9;
+}
+
+.redfile22table a:visited {
+	color: #eaede9;
+}
+
+.editresult {
+	margin-top: -13px;
+	margin-left: 80px;
+}
+
+.editresult a:link{
+	color: #111123;
+}
+
+.editresult a:visited{
+	color: #111123;
+}
+
+.editresult a:hover{
+	color: #6fcfcf;
+}
+
+
+
+
+
+.textoTour {
+	background-color: #666666;
+	width: 505px;
+	height: 60px;
+	color: #cacaca;
+	font-size: 11px;
+	border: none;
+	margin-top: 50px;
+	margin-left: -85px;
+}
+
+.field111T {
+	float:left;
+	width: 88px;
+	color: #cacaca;
+	font-size: 11px;
+	margin-bottom: 5px;
+	margin-left: 25px;
+}
+
+.field2T {
+	float:left;
+	width: 200px;
+	margin-bottom: 5px;
+}
+
+.actions5T {
+	margin-top: 160px;
+	background-color: #313131;
+	border:none;
+	color: #cacaca;
+	font-size: 13px;
+	float:right;
+	margin-right: 50px;
+}

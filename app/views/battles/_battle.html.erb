@@ -1,0 +1,37 @@
+<tr>
+	
+	<% if @tournament.kind!="League" && @tournament.kind!="Liga" %>
+		<td><%=battle.round%></td>
+	<% end %>
+	<td><%=battle.id_usuario1%></td>
+	<td><%=battle.id_usuario3%></td>
+	<% if cookies[:langu] == "en" %>
+		<%if battle.result == 0%>
+			<td>White<div class="editresult"><%= link_to "View/Edit", battle %></div></td>
+		<%else%>
+			<%if battle.result == 0.5%>
+				<td>Draw<div class="editresult"><%= link_to "View/Edit", battle %></div></td>
+			<%else%>
+				<%if battle.result == 1%>
+					<td>Black<div class="editresult"><%= link_to "View/Edit", battle %></div></td>
+				<%else%>
+					<td>Playing<div class="editresult"><%= link_to "View/Edit", battle %></div></td>
+				<%end%>	
+			<%end%>
+		<%end%>
+	<%else%>
+		<%if battle.result == 0%>
+			<td>Blancas<div class="editresult"><%= link_to "Ver/Editar", battle %></div></td>
+		<%else%>
+			<%if battle.result == 0.5%>
+				<td>Empate<div class="editresult"><%= link_to "Ver/Editar", battle %></div></td>
+			<%else%>
+				<%if battle.result == 1%>
+					<td>Negras<div class="editresult"><%= link_to "Ver/Editar", battle %></div></td>
+				<%else%>
+					<td>Jugando<div class="editresult"><%= link_to "Ver/Editar", battle %></div></td>
+				<%end%>	
+			<%end%>
+		<%end%>
+	<%end%>
+</tr>

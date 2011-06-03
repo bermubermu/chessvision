@@ -1,0 +1,170 @@
+﻿<body>
+<% if cookies[:langu] == "en" %>
+	<div class="information">
+		<div class="menu">
+			<div class="menu_edge1">
+				<div class="menu_edgehome">
+					<%= link_to i_home, english_path %>
+				</div>
+			</div>
+			<div class="box">
+				<%=i_usuario%> User access
+				<% if signed_in? %>
+					<div class="u1">
+						Welcome, <%= link_to current_user.name, current_user %><br />
+						Thank you for your visit.
+					</div>
+					<div class="u11">
+						<%= link_to i_usuarios, users_path %>
+					</div>
+					<div class="u111">
+						<%= link_to "Sign out", signout_path, :method => :delete %>
+					</div>
+				<% else %>
+					<%= form_for(:session, :url => sessions_path) do |f| %>
+						<%= f.text_field  :email, :class => "u2", :value=> "email@email.com" %>
+						<%= f.password_field :password, :class => "u22", :value=> "password" %>
+						<%= image_submit_tag("boton.png") %>
+					<% end %>
+					<div class="u222">
+						<%= link_to "Sign up", users_path %>
+						<%= i_v %>
+					</div>
+					<div class="u2222">
+						<%= link_to "Forgot your password?", forgot_path %>
+						<%= i_v %>
+					</div>
+				<% end %>
+			</div>
+	
+			<div class="box">
+				<%=i_contacto%> Clubs
+				<div class="u4">
+					Add your club or access available.
+				</div>
+				<div class ="u33">	
+					<%= i_telefono %>
+					<%= link_to "Record Club", new_club_path %>
+				</div>
+				<div class ="u33">	
+					<%= i_correo %>
+					<%= link_to "List of Clubs", clubs_path %>
+				</div>
+			</div>
+
+			<div class="box">
+				<%=i_contacto%> Tournaments
+				<div class="u4">
+					Add your tournament or access available.
+				</div>
+				<div class ="u33">	
+					<%= i_telefono %>
+					<%= link_to "Record Championship", new_tournament_path %>
+				</div>
+				<div class ="u33">	
+					<%= i_correo %>
+					<%= link_to "List of Championships", tournaments_path %>
+				</div>
+			</div>
+			<div class="menu_edge2">
+			</div>
+		</div>
+		<div class="menu_edge3">
+		</div>
+		<div class="data">
+			<% flash.each do |key, value| %>
+				<div class="flash <%= key %>"><%= value %></div>
+			<% end %>
+			<%= yield %>
+		</div>
+		<div class="menu_edge4">
+		</div>
+	</div>
+<% else %>
+	<div class="information">
+		<div class="menu">
+			<div class="menu_edge1">
+				<div class="menu_edgehome">
+					<%= link_to i_home, root_path %>
+				</div>
+			</div>
+			<div class="box">
+				<%=i_usuario%> Acceso usuarios
+				<% if signed_in? %>
+					<div class="u1">
+						Bienvenido, <%= link_to current_user.name, current_user %><br />
+						Gracias por iniciar sesión
+					</div>
+					<div class="u11">
+						<%= link_to i_usuarios, users_path %>
+					</div>
+					<div class="u111">
+						<%= link_to "Desconectar", signout_path, :method => :delete %>
+					</div>
+				<% else %>
+					<%= form_for(:session, :url => sessions_path) do |f| %>
+						<%= f.text_field  :email, :class => "u2", :value=> "email@email.com" %>
+						<%= f.password_field :password, :class => "u22", :value=> "password" %>
+						<%= image_submit_tag("boton.png") %>
+					<% end %>
+					<div class="u222">
+						<%= link_to "Registrarse", users_path %>
+						<%= i_v %>
+					</div>
+					<div class="u2222">
+						<%= link_to "¿Olvidó su contraseña?", forgot_path %>
+						<%= i_v %>
+					</div>
+				<% end %>
+			</div>
+	
+			<div class="box">
+				<%=i_contacto%> Clubs
+				<div class="u4">
+					Registra tu club o accede a los disponibles.
+				</div>
+				<div class ="u33">	
+					<%= i_telefono %>
+					<%= link_to "Registrar Club", new_club_path %>
+				</div>
+				<div class ="u33">	
+					<%= i_correo %>
+					<%= link_to "Listado de Clubs", clubs_path %>
+				</div>
+			</div>
+
+			<div class="box">
+				<%=i_contacto%> Torneos
+				<div class="u4">
+					Crea tu torneo o accede a los disponibles.
+				</div>
+				<div class ="u33">	
+					<%= i_telefono %>
+					<%= link_to "Registrar Campeonato", new_tournament_path %>
+				</div>
+				<div class ="u33">	
+					<%= i_correo %>
+					<%= link_to "Listado de Campeonatos", tournaments_path %>
+				</div>
+			</div>
+			<div class="menu_edge2">
+			</div>
+		</div>
+		<div class="menu_edge3">
+		</div>
+		<div class="data">
+			<% flash.each do |key, value| %>
+				<div class="flash <%= key %>"><%= value %></div>
+			<% end %>
+			<%= yield %>
+		</div>
+		<div class="menu_edge4">
+		</div>
+	</div>
+<% end %>
+</body>
+
+
+
+
+

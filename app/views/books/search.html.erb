@@ -1,0 +1,109 @@
+<div class="mapa2">
+</div>
+<div class="map2bu">
+		<% if cookies[:langu] == "en" %>
+			<%= form_tag search_path(@buscaa), :method => :post do %>
+			<div class="field1">
+				Event
+			</div>
+			<div class="field2">
+				<%= text_field_tag  :event, params[:event], :class => "dentr"%>
+			</div>
+			<div class="field1">
+				Site
+			</div>
+			<div class="field2">
+				<%= text_field_tag  :site, params[:site], :class => "dentr"%>
+			</div>
+			<div class="field1">
+				Black
+			</div>
+			<div class="field2">
+				<%= text_field_tag  :black, params[:black], :class => "dentr"%>
+			</div>
+			<div class="field1">
+				White
+			</div>
+			<div class="field2">
+				<%= text_field_tag  :white, params[:white], :class => "dentr"%>
+			</div>
+			<div class="field1">
+				Result
+			</div>
+			<div class="field2">
+				<select name=result class="langu">
+					<option>
+						<option> 0 
+						<option> 1/5
+						<option> 1
+				</select>
+			</div>
+			<div class="actions">
+				<%= submit_tag "Search", :class => "actions4s"%>
+			</div>
+			<% end %>
+		<% else %>
+			<%= form_tag search_path(@buscaa), :method => :post do %>
+			<div class="field1">
+				Evento
+			</div>
+			<div class="field2">
+				<%= text_field_tag  :event, params[:event], :class => "dentr"%>
+			</div>
+			<div class="field1">
+				Lugar
+			</div>
+			<div class="field2">
+				<%= text_field_tag  :site, params[:site], :class => "dentr"%>
+			</div>
+			<div class="field1">
+				Blancas
+			</div>
+			<div class="field2">
+				<%= text_field_tag  :black, params[:black], :class => "dentr"%>
+			</div>
+			<div class="field1">
+				Negras
+			</div>
+			<div class="field2">
+				<%= text_field_tag  :white, params[:white], :class => "dentr"%>
+			</div>
+			<div class="field1">
+				Resultado
+			</div>
+			<div class="field3">
+				<select name=result class="langu">
+					<option>
+						<option> 0 
+						<option> 1/5
+						<option> 1
+				</select>
+			</div>
+			<div class="actions">
+				<%= submit_tag "Buscar", :class => "actions4s"%>
+			</div>
+			<% end %>
+		<% end %>
+</div>
+<div class="mapb2">
+</div>
+<div class="mapa3">
+</div>
+<div class="map3bu">
+	<div class="tablabu">
+		<table border="1">
+			<tr>
+				<th ><%=@tournament%></th>
+				<th ><%=@site%></th>
+				<th ><%=@player1%></th>
+				<th ><%=@player2%></th>
+				<th ><%=@date%></th>
+				<th ><%=@download%></th>
+			</tr>
+			<%= render @buscaa %>
+		</table>
+	</div>
+</div>
+<div class="mapb3">
+</div>
+

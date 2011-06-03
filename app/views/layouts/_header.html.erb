@@ -1,0 +1,49 @@
+<header>
+<% if cookies[:langu] == "en" %>
+	<div class="head1">
+		<div class="flag">
+		<%= link_to i_spain, root_path %> <%= link_to i_england, english_path %>
+		</div>
+	</div>
+	<div class="head2">
+	</div>
+	<div class="selection">
+		<%= form_tag searchall_path(@busca), :method => :post do %>
+		<%= text_field_tag  :name, params[:name], :class => "u0" %>
+		<div class="u00">
+			<%= image_submit_tag("glass.png") %>
+		</div>
+		<% end %>
+		<div class="selection2">
+			<%=i_play%><%= link_to 'Games', books_path, :class => "s1" %>
+			<%=i_play%><%= link_to 'PGN viewer', tablero_path, :class => "s1"%>
+			<%=i_play%><%= link_to 'Advanced Search', search_path, :class => "s1"%>
+			<%=i_play%><%= link_to 'Play vs Machine', ia_path, :class => "s1"%>
+		</div>
+	</div>
+<% else %>
+	<div class="head1">
+		<div class="flag">
+		<%= link_to i_spain, root_path %> <%= link_to i_england, english_path %>
+		</div>
+	</div>
+	<div class="head2">
+	</div>
+	<div class="selection">
+		<%= form_tag searchall_path(@busca), :method => :post do %>
+		<%= text_field_tag  :name, params[:name], :class => "u0" %>
+		<div class="u00">
+			<%= image_submit_tag("glass.png") %>
+		</div>
+		<% end %>
+		<div class="selection2">
+			<%=i_play%><%= link_to 'Partidas', books_path, :class => "s1" %>
+			<%=i_play%><%= link_to 'Visualizador PGN', tablero_path, :class => "s1"%>
+			<%=i_play%><%= link_to 'Búsqueda Avanzada', search_path, :class => "s1"%>
+			<%=i_play%><%= link_to 'Jugar', ia_path, :class => "s1"%>
+		</div>
+	</div>
+<% end %>
+</header>
+
+

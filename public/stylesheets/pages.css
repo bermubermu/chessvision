@@ -1,0 +1,326 @@
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+------------------------------------------ Contact ------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.map {
+	background-color: #313131;
+	height:384px;
+	width: 621px;
+	float:left;
+	margin-left: 25px;
+	padding:18px;
+}
+
+.mapa {
+	background: url('../images/f11.png') no-repeat;
+	width: 657px;
+	height: 9px;
+	float:left;
+	margin-top: 19px;
+	margin-left: 25px;
+}
+.mapb {
+	background: url('../images/f22.png') no-repeat;
+	width: 657px;
+	height: 9px;
+	float:left;
+	margin-left: 25px;
+}
+
+
+
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+------------------------------------------ Web Map ------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.mapweb {	
+	font-size: 18px;
+	text-decoration: none;
+	color: #6fcfcf;
+}
+
+.mapweb2 {	
+	margin-right: 530px;
+	font-size: 12px;
+	text-decoration: none;
+	margin-left: 65px;
+	color: #6fcfcf;
+	margin-right:-5px;
+}
+
+
+.linmapweb {
+	width: 620px;
+	height: 1px;
+	background-color: #cacaca;
+	margin-top:13px;
+	margin-bottom:13px;
+
+}
+
+
+
+/* 
+
+---------------------------------------------------------------------------------------------------------------------------
+------------------------------------------ Home ------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.f444 {	
+	float: left;
+	background-color: #313131;
+	width: 299px;
+	height: 420px;
+}
+
+.home {
+	background: url('../images/home.png') no-repeat;
+	width: 257px;
+	height: 410px;
+	margin-top: 18px;
+	margin-left:42px;
+
+}
+
+.msg2 {
+	overflow: auto;
+	width: 350px;
+	height: 305px;
+	margin-top: 20px;
+}
+
+.msg3 {
+	margin-left: 15px;
+	margin-bottom:10px;
+	color: #fdfdfd; 
+	font-size: 14px;
+	padding-right: 13px;
+}
+
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------  Msgs   ---------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.notice {
+	margin-top: -29px;
+	margin-left: 30px;
+	padding-top: -10px;
+	color: #ff0018;
+	font: 100% sans-serif;
+	float: left;
+}
+
+.success {
+	margin-top: -29px;
+	margin-left: 30px;
+	padding-top: -10px;
+	color: #6fcfcf;
+	font: 100% sans-serif;
+	float: left;
+}
+
+
+
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------   Formularios   -----------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------   Errores   -----------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+#error_explanation {
+	width: 240px;
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+	margin-left: 15px;
+	font-size: 10px;
+}
+
+#error_explanation2 {
+	width: 240px;
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+	margin-left: 185px;
+	font-size: 10px;
+	margin-top: -30px;
+	margin-bottom: 50px;
+}
+
+#error_explanation h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 10px;
+	margin: -7px;
+	background-color: #c00;
+	color: #fff;
+}
+
+#error_explanation p {
+	color: #333;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+#error_explanation ul li {
+	font-size: 9px;
+	list-style: square;
+}
+
+#error_explanation2 h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 10px;
+	margin: -7px;
+	background-color: #c00;
+	color: #fff;
+}
+
+#error_explanation2 p {
+	color: #333;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+#error_explanation2 ul li {
+	font-size: 9px;
+	list-style: square;
+}
+
+
+
+
+
+
+
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------- IA   ------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.msg6 {
+	margin-left: 35px;
+	margin-top: 38px;
+	color: #fdfdfd; 
+	font-size: 8px;
+	padding-right: 13px;
+}
+
+
+/* 
+---------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------- Chess   -----------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+*/
+
+.moves {
+	overflow: auto;
+	width: 250px;
+	height: 280px;
+	margin-top: 25px;
+	margin-left: 15px;
+	border-style: solid;
+	border-width: 1px;
+	padding: 10px;
+}
+
+#demo-container .ct-white-square  
+{   
+	background-color: #a6a4a6; 
+}  
+
+#demo-container .ct-black-square  
+{   
+	background-color: #0a3947; 
+} 
+
+.board-piece-start-style {
+    background-repeat: no-repeat;
+    border: 0 none;
+    padding: 0;
+    position: relative;
+    visibility: hidden;
+}
+
+.ct-board-container {
+    padding: 5px;
+}
+
+.ct-board {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+
+.ct-board-border {
+    border: 2px solid #363A3D;
+}
+
+.ct-black-square, .ct-white-square{
+    display: block;
+    float: left;
+}
+
+.ct-nav-buttons {
+    padding-bottom: 7px;
+    padding-top: 7px;
+    text-align: left;
+    margin-left: 110px;
+}
+
+.ct-back, .ct-forward, .ct-start, .ct-end, .ct-play, .ct-stop {
+    display: inline;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+.ct-board-move-comment {
+    color:  #cacaca;
+}
+
+.ct-board-move-current {
+    color: red;
+}
+

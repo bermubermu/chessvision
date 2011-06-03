@@ -1,0 +1,18 @@
+﻿<li>
+<%= link_to allowed.id_usuario, users_path %>
+  <% if signed_in? %>
+		<% if cookies[:langu]== "en" %>
+			<% if current_user.admin? || current_user.id==@club.id_usuario %>
+			  | <%= link_to "delete", allowed, :method => :delete, :confirm => "You sure?",
+											:title => "Delete #{allowed.id_usuario}" %>
+			<% end %>
+		<% else %>
+			<% if current_user.admin? || current_user.id==@club.id_usuario %>
+			  | <%= link_to "eliminar", allowed, :method => :delete, :confirm => "¿Estás seguro?",
+											:title => "Delete #{allowed.id_usuario}" %>
+			<% end %>
+		<% end %>
+  <% end %>
+</li>
+
+

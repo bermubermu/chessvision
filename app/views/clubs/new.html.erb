@@ -1,0 +1,123 @@
+<div class="mapaindex">
+</div>
+<div class="mapindex">
+	<% if cookies[:langu] == "en" %>
+		<div class="msgindex">Add your Club and so will be available worldwide.
+		</div>
+		  <br /><br /><%= form_for(@club, :html => { :multipart => true }) do |f| %>
+		  <%= render 'shared/error_messages2', :object => f.object %>
+		  <div class="field1">
+		    <%= f.label :name%>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :name, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :email %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :email, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :address %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :address, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :province %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :province, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :person %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :person, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :phone %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :phone, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :date %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :date, :class => "dentr" %>
+		  </div>
+		    <div class="field111">
+		    <br /><br /><br /><%= f.label :information %>
+		  </div>
+		  <div class="field2">
+		    <br /><%= f.text_area :information, :class => "textooo"%>
+		  </div>
+		    <div class="actions">
+		    <%= f.submit "Record Club >>", :class => "actions5"%>
+		  </div>
+		<% end %>
+	<% else %>
+		<div class="msgindex">Registra tu Club y así estará disponibe a todo el mundo.
+		</div>
+		  <br /><br /><%= form_for(@club, :html => { :multipart => true }) do |f| %>
+		  <%= render 'shared/error_messages2', :object => f.object %>
+		  <div class="field1">
+		    <%= f.label :nombre%>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :name, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :correo %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :email, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :direccion %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :address, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :provincia %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :province, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :persona %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :person, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :phone %>
+		  </div>
+                  <div class="field2">
+		    <%= f.text_field :phone, :class => "dentr" %>
+		  </div>
+		  <div class="field1">
+		    <%= f.label :fecha %>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :date, :class => "dentr" %>
+		  </div>
+		    <div class="field111">
+		    <br /><br /><br /><%= f.label :informacion %>
+		  </div>
+		  <div class="field2">
+		    <br /><%= f.text_area :information, :class => "textooo"%>
+		  </div>
+		    <div class="actions">
+		    <%= f.submit "Grabar Club >>", :class => "actions5"%>
+		  </div>
+		<% end %>
+	<% end %>
+</div>
+<div class="mapbindex">
+</div>
+		
+

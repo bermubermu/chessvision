@@ -1,0 +1,30 @@
+﻿<li>
+	<div class="line">
+	</div>
+	<div class="comentt">
+		<%=micropost.coment%>
+	</div>		
+	<div class="postea">
+		<%=micropost.id_usuario%> 
+		<% if ((((((Time.now - micropost.created_at).abs)/3600).round)/24) == 0) %>
+			<% if (((((Time.now - micropost.created_at).abs)/3600).round) == 0) %>
+				<% if (((((Time.now - micropost.created_at).abs)/60).round) == 0) %>
+					hace <%= (((Time.now - micropost.created_at).abs).round) %> segundo/s
+				<% else %>
+					hace <%= ((((Time.now - micropost.created_at).abs)/60).round) %> minuto/s
+				<% end %>
+			<% else %>
+				hace <%= ((((Time.now - micropost.created_at).abs)/3600).round) %> hora/s
+			<% end %>
+		<% else %>
+			hace <%= (((((Time.now - micropost.created_at).abs)/3600).round)/24) %> día/s
+		<% end %>
+		<% if current_user.admin? || current_user.id==micropost.id_usuario2 %>
+		  | <%= link_to "delete", micropost, :method => :delete, :confirm => "You sure?",
+										:title => "Delete #{micropost.coment}" %>
+		<% end %>
+	</div>
+</li>
+
+
+
