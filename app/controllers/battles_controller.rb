@@ -30,15 +30,12 @@ class BattlesController < ApplicationController
 		@o3 =  @battle.id_usuario3.capitalize
 		@o4 =  @battle.id_usuario3.titleize
 
-		@book = Book.find(:first, :conditions => ["((event=? OR event=? OR event=? OR event=? OR event=?) AND round=? AND (white=? OR white=? OR white=? OR white=? OR white=?) AND (black=? OR black=? OR black=? OR black=? OR black=?))", @tournament.name, @n1, @n2, @n3, @n4, @battle.round, @battle.id_usuario1, @m1, @m2, @m3, @m4, @battle.id_usuario3, @o1, @o2, @o3, @o4,])
+		@book = Book.find(:first, :conditions => ["((event=? OR event=? OR event=? OR event=? OR event=?) AND round=? AND (white=? OR white=? OR white=? OR white=? OR white=?) AND (black=? OR black=? OR black=? OR black=? OR black=?))", @tournament.name, @n1, @n2, @n3, @n4, @battle.round, @battle.id_usuario1, @m1, @m2, @m3, @m4, @battle.id_usuario3, @o1, @o2, @o3, @o4])
 		if !@book
 			@vvv=0
 		else
 			@vvv=1
 		end
-
-		@tournament = Tournament.find(cookies[:last_tournament_id])
-		@battle = Battle.find(params[:id])
 
 if (current_user.admin? || current_user.id == @battle.id_usuario2 || current_user.id == @battle.id_usuario4 || current_user.id==@tournament.id_usuario)
 	@per=0

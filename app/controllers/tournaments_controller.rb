@@ -83,20 +83,6 @@ class TournamentsController < ApplicationController
 			end
 		end
 
-		@tournament = Tournament.find(cookies[:last_tournament_id])
-		@n1 =  @tournament.organizador.downcase
-		@n2 =  @tournament.organizador.upcase
-		@n3 =  @tournament.organizador.capitalize
-		@n4 =  @tournament.organizador.titleize
-
-		@cluba = Club.find(:first, :conditions => ["(name=? OR name=? OR name=? OR name=? OR name=?)", @tournament.organizador, @n1, @n2, @n3, @n4])
-		if !@cluba
-			@vvv=0
-		else
-			@vvv=1
-		end
-
-
 		@user_tournament = User.find(id=@tournament.id_usuario)
 		@title = @tournament.name
 		@player = Player.new
@@ -167,7 +153,20 @@ class TournamentsController < ApplicationController
 			end
 			@add2="tres"
 		end
-		@player2.destroy 
+		@player2.destroy
+
+		@tournament = Tournament.find(cookies[:last_tournament_id])
+		@n1 =  @tournament.organizador.downcase
+		@n2 =  @tournament.organizador.upcase
+		@n3 =  @tournament.organizador.capitalize
+		@n4 =  @tournament.organizador.titleize
+
+		@cluba = Club.find(:first, :conditions => ["(name=? OR name=? OR name=? OR name=? OR name=?)", @tournament.organizador, @n1, @n2, @n3, @n4])
+		if !@cluba
+			@vvv=0
+		else
+			@vvv=1
+		end
 	end
 
 
