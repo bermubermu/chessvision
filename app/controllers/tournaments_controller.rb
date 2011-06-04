@@ -272,15 +272,15 @@ class TournamentsController < ApplicationController
 		@reff=Battle.count(:all, :conditions => ["id_tournament=?", @tournament.id])
 		@cont= (@reff/(@coom3/2))+1
 		@contar= 1
-		@battle2 = Battle.new(0)
-		@battle2.id_tournament = 0
-		@battle2.save
+
+		@player2.destroy
+
 
 if (@tournament.kind == "League" || @tournament.kind == "Liga")
 	if (@coon == @tournament.number_players)
 			while (@coom5 != 1)
-				@cooo=Player.find(:first, :conditions => ["(id_tournament=? AND control=?) OR id=?", @tournament.id, @contar-1, @player2.id])
-				if (@cooo.id != @player2.id)
+				@cooo=Player.find(:first, :conditions => ["(id_tournament=? AND control=?)", @tournament.id, @contar-1])
+				if (@cooo)
 					@cooo.update_attribute(:control, @contar)
 					@cooo.update_attribute(:control2, 1000*@rounds+100*@coom5)
 					@cont6=@coom5
@@ -316,19 +316,16 @@ end
 				end
 				@coom5=@coom5-1
 				if @coom5==1
-				@cooo=Player.find(:first, :conditions => ["(id_tournament=? AND control=?) OR id=?", @tournament.id, @contar-1, @player2.id])
+				@cooo=Player.find(:first, :conditions => ["(id_tournament=? AND control=?)", @tournament.id, @contar-1])
 				@cooo.update_attribute(:control, @contar)
 				end
 			end
 	end
-
-	@player2.destroy
-	@battle2.destroy
 else
 		if (@coon == @tournament.number_players)
 			while (@coom1 != 0)
-				@cooo=Player.find(:first, :conditions => ["(id_tournament=? AND control=?) OR id=?", @tournament.id, 0, @player2.id])
-				if (@cooo.id == @player2.id)
+				@cooo=Player.find(:first, :conditions => ["(id_tournament=? AND control=?)", @tournament.id, 0])
+				if (!@cooo)
 					@pp2 ="el 2"
 				else
 					@pp3 ="el 3"
@@ -350,14 +347,14 @@ else
 			end
 
 			if(@cont<=@rounds)
-			if (@cooo.id == @player2.id)
-@coou=Battle.find(:first, :conditions => ["(id_tournament=? AND round=? AND result=?) OR id=?", @tournament.id, @cont-1, 4, @battle2.id])
-				if (@coou.id != @battle2.id)
+			if (!@cooo)
+@coou=Battle.find(:first, :conditions => ["(id_tournament=? AND round=? AND result=?)", @tournament.id, @cont-1, 4])
+				if (@coou)
 					@pp4 ="El 4"
 				else
 					while (@coom2 != 0)
-@cuuu=Player.find(:first, :conditions => ["(id_tournament=? AND control=?) OR id=?", @tournament.id, @cont-1, @player2.id], :order => 'score desc')
-						if (@cuuu.id == @player2.id)
+@cuuu=Player.find(:first, :conditions => ["(id_tournament=? AND control=?)", @tournament.id, @cont-1], :order => 'score desc')
+						if (!@cuuu)
 							@pp5 ="el 5"
 						else
 							@pp6 ="el 6"
@@ -369,8 +366,8 @@ else
 							@table1.id_usuario2 = @cuuu.id_usuario2
 							@cuuu.update_attribute(:control, @cont)
 
-@cuou=Player.find(:first, :conditions => ["(id_tournament=? AND control=? AND control2!=?) OR id=?", @tournament.id, @cont-1, @cont*100+@cont3, @player2.id], :order => 'score desc')
-@cuouu=Battle.find(:first, :conditions => ["(id_tournament=? AND ((id_usuario2=? AND id_usuario4=?)OR(id_usuario2=? AND id_usuario4=?))) OR id=?", @tournament.id, @cuuu.id_usuario2, @cuou.id_usuario2, @cuou.id_usuario2, @cuuu.id_usuario2, @battle2.id])
+@cuou=Player.find(:first, :conditions => ["(id_tournament=? AND control=? AND control2!=?)", @tournament.id, @cont-1, @cont*100+@cont3], :order => 'score desc')
+@cuouu=Battle.find(:first, :conditions => ["(id_tournament=? AND ((id_usuario2=? AND id_usuario4=?)OR(id_usuario2=? AND id_usuario4=?)))", @tournament.id, @cuuu.id_usuario2, @cuou.id_usuario2, @cuou.id_usuario2, @cuuu.id_usuario2])
 
 							while (@coom4==0)
 								@pp7 ="el 7"
@@ -382,7 +379,7 @@ else
 									@cuou.update_attribute(:control, @cont)
 									@coom4=1
 								else
-									if (@cuouu.id != @battle2.id)
+									if (@cuouu)
 										@pp8 ="el 8"
 										@cuou.update_attribute(:control2, @cont*100+@cont3) 
 									else
@@ -394,8 +391,8 @@ else
 										@coom4=1
 									end
 								end
-@cuou=Player.find(:first, :conditions => ["(id_tournament=? AND control=? AND control2!=?) OR id=?", @tournament.id, @cont-1, @cont*100+@cont3, @player2.id], :order => 'score desc')
-@cuouu=Battle.find(:first, :conditions => ["(id_tournament=? AND ((id_usuario2=? AND id_usuario4=?)OR(id_usuario2=? AND id_usuario4=?))) OR id=?", @tournament.id, @cuuu.id_usuario2, @cuou.id_usuario2, @cuou.id_usuario2, @cuuu.id_usuario2, @battle2.id])
+@cuou=Player.find(:first, :conditions => ["(id_tournament=? AND control=? AND control2!=?)", @tournament.id, @cont-1, @cont*100+@cont3], :order => 'score desc')
+@cuouu=Battle.find(:first, :conditions => ["(id_tournament=? AND ((id_usuario2=? AND id_usuario4=?)OR(id_usuario2=? AND id_usuario4=?)))", @tournament.id, @cuuu.id_usuario2, @cuou.id_usuario2, @cuou.id_usuario2, @cuuu.id_usuario2])
 								@cont3 = @cont3+1
 							end
 							@coom4=0
@@ -410,8 +407,7 @@ else
 				@pp14="el 14"
 			end
 		end
-		@player2.destroy
-		@battle2.destroy
+
 end
 
 	@battlesend = Battle.paginate(:page => params[:page],:conditions => ["id_tournament=?", @tournament.id], :order => 'created_at ASC', :per_page => 20 ) 
