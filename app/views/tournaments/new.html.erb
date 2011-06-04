@@ -8,7 +8,7 @@ function incrementar() { contador++; alert('El contador ahora vale :' + contador
 </div>
 <div class="mapindex">
 	<% if cookies[:langu] == "en" %>
-		<div class="msgindex">Add your Tournament.
+		<div class="msgindex">Add your Championship. May be a simple League or a Swiss Tournament.
 		</div>
 		  <br /><br /><%= form_for(@tournament, :html => { :multipart => true }) do |f| %>
 		  <%= render 'shared/error_messages2', :object => f.object %>
@@ -89,7 +89,7 @@ function incrementar() { contador++; alert('El contador ahora vale :' + contador
 		  </div>
 		<% end %>
 	<% else %>
-		<div class="msgindex">Registra tu Torneo.
+		<div class="msgindex">Registra tu Campeonato. Podrá ser una Liga Simple o un Torneo Suizo.
 		</div>
 		  <br /><br /><%= form_for(@tournament, :html => { :multipart => true }) do |f| %>
 		  <%= render 'shared/error_messages2', :object => f.object %>

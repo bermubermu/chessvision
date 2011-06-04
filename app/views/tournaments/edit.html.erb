@@ -2,7 +2,7 @@
 </div>
 <div class="mapindex">
 	<% if cookies[:langu] == "en" %>
-		<div class="msgindex">Edit your Tournament.
+		<div class="msgindex">Edit your Championship.
 		</div>
 		  <br /><br /><%= form_for(@tournament, :html => { :multipart => true }) do |f| %>
 		  <%= render 'shared/error_messages2', :object => f.object %>
@@ -83,7 +83,7 @@
 		  </div>
 		<% end %>
 	<% else %>
-		<div class="msgindex">Edita tu Torneo.
+		<div class="msgindex">Edita tu Campeonato.
 		</div>
 		  <br /><br /><%= form_for(@tournament, :html => { :multipart => true }) do |f| %>
 		  <%= render 'shared/error_messages2', :object => f.object %>

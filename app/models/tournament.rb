@@ -11,7 +11,7 @@ class Tournament < ActiveRecord::Base
 	validates :name, :length   => { :maximum => 50, :message => 'Nombre demasiado largo' }, :uniqueness => { :case_sensitive => false, :message => 'Este nombre ya esta registrado' }
 
 	validates_numericality_of :number_players, :even => "true", :greater_than => 0, :message => 'Jugadores debe de ser un numero par mayor que 0'
-	validates_numericality_of :number_rounds, :message => 'Rondas debe de ser un numero par mayor que 0', :even => "true", :greater_than => 0
+	validates_numericality_of :number_rounds, :message => 'Rondas debe de ser un numero par mayor que 0', :greater_than => 0
 			
 	validates :country, :length   => { :maximum => 50, :message => 'Pais demasiado largo'}			
 	validates :city,  :length   => { :maximum => 50, :message => 'Ciudad demasiada larga' }

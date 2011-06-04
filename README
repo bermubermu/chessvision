@@ -1,1 +1,19 @@
 == Welcome to ChessVision ==
+
+ChessVision is a web server Chess games. It can upload / download games in PGN format. The main 
+characteristic is to offer the possibility of up not only of famous players but any player 
+willing.
+
+ChessVision has a place for clubs, where you can register any club. In this space, shows a basic 
+information such as name, mail or place, a part where the club is putting news and events available 
+and board, where the club and users can discuss about any topic. To access certain parts of this 
+space, how the new or the board, users should be friends of the club. To do so send a friend 
+request and the club concerned will accept you or not.
+
+ChessVision also organizes championships. These championships can be Swiss Tournament or simple League. 
+May be public or private. The number of players must be even and the number of rounds more than zero. 
+These championships may watch the games, results, ranking and participants.
+
+Also available a viewer for PGN games. Here you can view games in PGN seeing each movements. If the 
+file there are various items, you can select the desired. In addition you can also play a quick 
+game of chess against the machine, serve as training.
