@@ -316,8 +316,10 @@ end
 				end
 				@coom5=@coom5-1
 				if @coom5==1
-				@cooo=Player.find(:first, :conditions => ["(id_tournament=? AND control=?)", @tournament.id, @contar-1])
-				@cooo.update_attribute(:control, @contar)
+					@cooo=Player.find(:first, :conditions => ["(id_tournament=? AND control=?)", @tournament.id, @contar-1])
+					if @cooo
+						@cooo.update_attribute(:control, @contar)
+					end
 				end
 			end
 	end
