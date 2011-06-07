@@ -99,7 +99,6 @@ class ProblemsController < ApplicationController
 
 	def destroy
 		@problem = Problem.find(params[:id])
-		@problem.remove_picture!
 		@problem.destroy
 		if cookies[:langu]== "en"
 			flash[:success] = "Book destroyed"
