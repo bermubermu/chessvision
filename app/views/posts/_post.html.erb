@@ -38,7 +38,7 @@
 			<% else %>
 				hace <%= (((((Time.now - post.created_at).abs)/3600).round)/24) %> día/s
 			<% end %>
-			<% if current_user.admin? || current_user.id==post.id_usuario2 %>
+			<% if current_user.admin? || current_user.id==post.id_usuario2 || current_user.id==@club.id_usuario %>
 			  | <%= link_to "delete", post, :method => :delete, :confirm => "¿Estás seguro?",
 											:title => "Delete #{post.coment}" %>
 			<% end %>
