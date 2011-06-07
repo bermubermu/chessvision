@@ -18,7 +18,7 @@ class AnswersController < ApplicationController
 		redirect_to root_path
 	end
 	def index
-		redirect_to root_path
+		@problem = Problem.find(params[:id])
 	end
   
 	def create

@@ -19,7 +19,7 @@
 		<% else %>
 			hace <%= (((((Time.now - answer.created_at).abs)/3600).round)/24) %> día/s
 		<% end %>
-		<% if current_user.admin? || current_user.id==answer.id_usuario2 %>
+		<% if current_user.admin? || current_user.id==answer.id_usuario2 || current_user.id==@problem.id_usuario %>
 		  | <%= link_to "delete", answer, :method => :delete, :confirm => "You sure?",
 										:title => "Delete #{answer.reply}" %>
 		<% end %>
