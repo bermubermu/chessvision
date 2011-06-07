@@ -8,7 +8,7 @@ class Problem < ActiveRecord::Base
 	validates_presence_of :question, :message => 'Pregunta no puede estar en blanco'
 	validates :question, :length   => { :maximum => 2040, :message => 'Pregunta demasiada larga' }
 
-
+  	has_attached_file :picture, :styles => { :thumb=> "100x100#", :small  => "150x150>" }
 
 
 
