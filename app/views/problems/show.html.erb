@@ -10,7 +10,12 @@
 		<div class="f3tt"><br />
 			<div class="f3ttp1"><%= @problem.name %></div>
 			<div class="f3ttp2"><%= image_tag @problem.picture.url(:thumb) %></div>
-			<div class="f3ttp3"><%= @problem.question %></div>
+			<div class="f3ttp3"><%= @problem.question %>			<% if signed_in? %>
+				<% if current_user.id==@problem.id_usuario || current_user.admin? %>
+				(<%= link_to "edit", edit_problem_path %>)
+				<% end %>
+			<% end %>
+			</div>
 		</div>
 	</div>
 	<div class="f2b">

@@ -4,6 +4,35 @@
 ---------------------------------------------------------------------------------------------------------------------------
 */
 
+.tabla2pp {
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	overflow: auto;
+	height:320px;
+	width: 628px;
+}
+
+.tabla2pp th {
+	max-width: 200px;
+	min-width: 200px;
+	color: #fdfdfd;	
+}
+
+
+.tabla2pp td {
+	max-width: 200px;
+	min-width: 200px;
+	color: #eaede9;
+}
+
+.tabla2pp a:link {
+	color: #eaede9;
+}
+
+.tabla2pp a:visited {
+	color: #eaede9;
+}
 
 
 
@@ -38,4 +67,12 @@
 	font-size: 12px;
 }
 
+.f3ttp3 a:link{
+	text-decoration: none;
+	color: #cacaca;
+}
 
+.f3ttp3 a:visited {
+	text-decoration: none;
+	color: #cacaca;
+}
