@@ -36,6 +36,10 @@ GEM
       http_connection
       uuidtools
       xml-simple
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     bcrypt-ruby (2.1.4)
     bcrypt-ruby (2.1.4-x86-mingw32)
     builder (2.1.2)
@@ -131,6 +135,7 @@ PLATFORMS
 DEPENDENCIES
   annotate-models (= 1.0.4)
   aws
+  aws-s3
   carrierwave
   devise
   fog
