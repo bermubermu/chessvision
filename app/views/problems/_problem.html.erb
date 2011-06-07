@@ -1,0 +1,11 @@
+<tr>
+	<td><%= link_to problem.name, problem %></td>
+	<td><%=problem.created_at%>
+	  <% if signed_in? %>
+		  <% if current_user.id==problem.id_usuario || current_user.admin? %>
+		  (<%= link_to "delete", problem, :method => :delete, :confirm => @areyousure,
+										:title => "Delete #{problem.name}" %>)
+		  <% end %>
+	  <% end %>
+	</td>
+</tr>

@@ -25,9 +25,24 @@ class PagesController < ApplicationController
 	def tablero
 		if cookies[:langu]== "en"
 			@cargar = "Load PGN"
+			@title = "View PGN"
 
 		else
 			@cargar = "Cargar PGN"
+			@title = "Ver PGN"
+		end
+	end
+
+	def chat
+			@title = "Chat"
+	end
+
+	def ia
+		if cookies[:langu]== "en"
+			@title = "Play"
+
+		else
+			@title = "Jugar"
 		end
 	end
 end

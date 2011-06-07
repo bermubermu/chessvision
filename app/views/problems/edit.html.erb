@@ -1,0 +1,49 @@
+<div class="mapaindex">
+</div>
+<div class="mapindex">
+	<% if cookies[:langu] == "en" %>
+		<div class="msgindex">Edit your problem.
+		</div>
+		  <br /><br /><%= form_for(@problem, :html => { :multipart => true }) do |f| %>
+		  <%= render 'shared/error_messages2', :object => f.object %>
+		  <div class="field1">
+		    <%= f.label :name%>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :name, :class => "dentr" %>
+		  </div>
+		    <div class="field111">
+		    <br /><br /><br /><%= f.label :cuestion %>
+		  </div>
+		  <div class="field2">
+		    <br /><%= f.text_area :question, :class => "textooo"%>
+		  </div>
+		    <div class="actions">
+		    <%= f.submit "Edit Problem >>", :class => "actions2"%>
+		  </div>
+		<% end %>
+	<% else %>
+		<div class="msgindex">Edita tu problema.
+		</div>
+		  <br /><br /><%= form_for(@problem, :html => { :multipart => true }) do |f| %>
+		  <%= render 'shared/error_messages2', :object => f.object %>
+		  <div class="field1">
+		    <%= f.label :nombre%>
+                  </div>
+		  <div class="field2"> 
+		    <%= f.text_field :name, :class => "dentr" %>
+		  </div>
+		    <div class="field111">
+		    <br /><br /><br /><%= f.label :pregunta %>
+		  </div>
+		  <div class="field2">
+		    <br /><%= f.text_area :question, :class => "textooo"%>
+		  </div>
+		    <div class="actions">
+		    <%= f.submit "Editar Problema >>", :class => "actions2"%>
+		  </div>
+		<% end %>
+	<% end %>
+</div>
+<div class="mapbindex">
+</div>

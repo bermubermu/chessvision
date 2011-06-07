@@ -8,6 +8,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'aws'
 gem 'fog'
+gem 'paperclip'
 
 group :development do
   gem 'rspec-rails', '2.0.1'

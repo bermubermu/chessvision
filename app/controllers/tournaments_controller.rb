@@ -46,7 +46,7 @@ class TournamentsController < ApplicationController
 			@day = "day"
 			@configuration = "Configuration >>"
 			@information = "Information"
-			@play = "Players"
+			@play = "Chat"
 			@vs = "Games"
 			@classi = "Classification"
 			@acces = "Acces"
@@ -70,7 +70,7 @@ class TournamentsController < ApplicationController
 			@day = "dia"
 			@configuration = "Configuracion >>"
 			@information = "Datos"
-			@play = "Jugadores"
+			@play = "Chat"
 			@vs = "Encuentros"
 			@classi = "Clasificacion"
 			@acces = "Acceso"
@@ -171,52 +171,14 @@ class TournamentsController < ApplicationController
 
 
 
-	def participants
-		if cookies[:langu]== "en"
-			@information = "Information"
-			@play = "Players"
-			@vs = "Games"
-			@classi = "Classification"
-		else
-			@information = "Datos"
-			@play = "Jugadores"
-			@vs = "Encuentros"
-			@classi = "Clasificacion"
-		end
-		@tournament = Tournament.find(cookies[:last_tournament_id])
-		@title = @tournament.name
-		@playerdd = Player.paginate(:page => params[:page], :per_page => 6, :conditions => ["id_tournament=?", @tournament.id], :order => 'created_at DESC' )
-
-
-		@player2 = Player.new(0)
-		@player2.id_usuario = 0
-		@player2.id_usuario2 = 0
-		@player2.id_tournament = 0
-		@player2.save
-
-		@add = Player.find(:first, :conditions => ["(id_usuario2=? AND id_tournament=?) OR id=?", current_user.id, @tournament.id, @player2.id])
-
-
-		if (current_user.admin? || @add.id_usuario2==current_user.id || current_user.id==@tournament.id_usuario)
-			@add2="uno"
-			if current_user.id==@tournament.id_usuario
-				@add2="dos"
-			end
-		else
-			if @tournament.visible == "public" || @tournament.visible == "publico"
-				@add2="uno"
-			else
-				@add2="tres"
-			end
-		end
-		@player2.destroy 
+	def chat
 	end
 
 
 	def versus
 		if cookies[:langu]== "en"
 			@information = "Information"
-			@play = "Players"
+			@play = "Chat"
 			@vs = "Games"
 			@classi = "Classification"
 			@round = "Round"
@@ -225,7 +187,7 @@ class TournamentsController < ApplicationController
 			@result = "Result"
 		else
 			@information = "Datos"
-			@play = "Jugadores"
+			@play = "Chat"
 			@vs = "Encuentros"
 			@classi = "Clasificacion"
 			@round = "Ronda"
@@ -420,12 +382,12 @@ end
 	def classification
 		if cookies[:langu]== "en"
 			@information = "Information"
-			@play = "Players"
+			@play = "Chat"
 			@vs = "Games"
 			@classi = "Classification"
 		else
 			@information = "Datos"
-			@play = "Jugadores"
+			@play = "Chat"
 			@vs = "Encuentros"
 			@classi = "Clasificacion"
 		end

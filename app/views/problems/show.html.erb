@@ -1,0 +1,36 @@
+<div class="pag">
+	<%= will_paginate @answerss, :class => 'paginationpost', :previous_label => i_previous, :next_label => i_next %>
+</div>
+
+
+<div class="f1">
+	<div class="f3at">
+	</div>
+	<div class="f3t">
+		<div class="f3tt">
+LEFA
+<%= image_tag @problem.picture.url %>
+		</div>
+	</div>
+	<div class="f2b">
+	</div>
+</div>
+<div class="f4a">
+</div>
+<div class="f4">
+	<div class="msg"><%=@msg%>
+	</div>
+	<%= render 'shared/answer_form' %>
+	<ul class="posts">
+	<div class="posts2">
+		<%= render @answerss %><br />
+		<div class="line2"></div>
+	</div>
+	</ul>
+</div>
+<div class="f4b">
+</div>
+
+
+
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110519091743) do
+ActiveRecord::Schema.define(:version => 20110607155851) do
 
   create_table "alloweds", :force => true do |t|
     t.datetime "created_at"
@@ -20,16 +20,31 @@ ActiveRecord::Schema.define(:version => 20110519091743) do
     t.integer  "id_usuario2"
   end
 
-  create_table "battles", :force => true do |t|
-    t.string   "name"
+  create_table "answers", :force => true do |t|
+    t.string   "reply",       :limit => 2040
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "id_problem"
+    t.string   "id_usuario"
+    t.integer  "id_usuario2"
+  end
+
+  create_table "battles", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "round"
+    t.float    "result"
+    t.integer  "id_tournament"
+    t.string   "id_usuario1"
+    t.integer  "id_usuario2"
+    t.string   "id_usuario3"
+    t.integer  "id_usuario4"
   end
 
   create_table "books", :force => true do |t|
     t.string   "event"
     t.string   "site"
-    t.string   "round"
+    t.integer  "round"
     t.string   "white"
     t.string   "black"
     t.string   "elo_white"
@@ -77,12 +92,14 @@ ActiveRecord::Schema.define(:version => 20110519091743) do
   end
 
   create_table "players", :force => true do |t|
-    t.string   "score"
+    t.float    "score"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "id_tournament"
     t.string   "id_usuario"
     t.integer  "id_usuario2"
+    t.integer  "control"
+    t.integer  "control2"
   end
 
   create_table "posts", :force => true do |t|
@@ -92,6 +109,18 @@ ActiveRecord::Schema.define(:version => 20110519091743) do
     t.integer  "id_club"
     t.string   "id_usuario"
     t.integer  "id_usuario2"
+  end
+
+  create_table "problems", :force => true do |t|
+    t.string   "name"
+    t.string   "question"
+    t.string   "picture"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "id_usuario"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
   end
 
   create_table "requests", :force => true do |t|
@@ -114,15 +143,15 @@ ActiveRecord::Schema.define(:version => 20110519091743) do
     t.string   "kind"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "number_players"
-    t.string   "number_rounds"
+    t.integer  "number_players"
+    t.integer  "number_rounds"
     t.string   "country"
     t.string   "city"
     t.string   "organizador"
     t.string   "email"
     t.string   "url"
-    t.string   "open_registration"
     t.string   "information"
+    t.string   "visible"
     t.integer  "id_usuario"
   end
 

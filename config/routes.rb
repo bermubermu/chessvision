@@ -11,6 +11,8 @@ SampleApp::Application.routes.draw do
 	resources :requests
 	resources :alloweds
 	resources :players
+	resources :problems
+	resources :answers
 
 	match '/event',  :to => 'books#event'
 	match '/site',  :to => 'books#site'
@@ -26,13 +28,13 @@ SampleApp::Application.routes.draw do
 	match '/participants',  :to => 'tournaments#participants'
 	match '/versus',  :to => 'tournaments#versus'
 	match '/classification',  :to => 'tournaments#classification'
+	match '/chat',  :to => 'tournaments#chat'
 
 	match '/signup',  :to => 'users#new'
 	match '/signin',  :to => 'sessions#new'
 	match '/signout', :to => 'sessions#destroy'
 
 	match '/man',    :to => 'pages#man'
-	match '/elo',    :to => 'pages#elo'
 	match '/tablero',    :to => 'pages#tablero'
 	match '/ia',    :to => 'pages#ia'
 	match '/forgot',    :to => 'users#forgot'
