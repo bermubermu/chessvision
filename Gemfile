@@ -9,6 +9,7 @@ gem 'carrierwave'
 gem 'aws'
 gem 'fog'
 gem 'paperclip'
+gem 'aws-s3', :require => 'aws/s3'
 
 group :development do
   gem 'rspec-rails', '2.0.1'

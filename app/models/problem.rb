@@ -8,7 +8,7 @@ class Problem < ActiveRecord::Base
 	validates_presence_of :question, :message => 'Pregunta no puede estar en blanco'
 	validates :question, :length   => { :maximum => 2040, :message => 'Pregunta demasiada larga' }
 
-  has_attached_file :picture, :styles => { :thumb=> "100x100#", :small  => "150x150>" }, :storage => :s3
+  has_attached_file :picture, :styles => { :thumb=> "100x100#", :small  => "150x150>" }, :storage => :s3, :s3_credentials => "#{RAILS_ROOT}/config/s3.yml", :url => "/:class/:attachment/:id/:style_:basename.:extension", :bucket => 'albertorecurso'
 
 
 
