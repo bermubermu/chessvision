@@ -1,2 +1,12 @@
-access_key_id: 'AKIAIM4FSUC2GORGIQYA'
-secret_access_key: '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'
+development:
+  bucket: albertorecurso
+  access_key_id: AKIAIM4FSUC2GORGIQYA
+  secret_access_key: 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
+test:
+  bucket: albertorecurso
+  access_key_id: AKIAIM4FSUC2GORGIQYA
+  secret_access_key: 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
+production:
+  bucket: albertorecurso
+  access_key_id: AKIAIM4FSUC2GORGIQYA
+  secret_access_key: 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
