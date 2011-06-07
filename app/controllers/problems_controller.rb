@@ -15,12 +15,14 @@ class ProblemsController < ApplicationController
 			@date = "Date"
 			@areyousure = "Will proceed to delete..."
 			@nproblem = "New Problem"
+			@question = "Problem"
 		else
 			@title = "Problemas"
 			@name = "Nombre"
 			@date = "Fecha"
 			@areyousure = "Se va a proceder a eliminar..."
 			@nproblem = "Nuevo Problema"
+			@question = "Problema"
 		end
 	end
 
@@ -101,9 +103,9 @@ class ProblemsController < ApplicationController
 		@problem = Problem.find(params[:id])
 		@problem.destroy
 		if cookies[:langu]== "en"
-			flash[:success] = "Book destroyed"
+			flash[:success] = "Problem destroyed"
 		else
-			flash[:success] = "Libro Destruido"
+			flash[:success] = "Problema Destruido"
 		end
 		redirect_to problems_path
 	end
