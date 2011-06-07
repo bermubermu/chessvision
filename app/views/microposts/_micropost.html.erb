@@ -19,7 +19,7 @@
 		<% else %>
 			hace <%= (((((Time.now - micropost.created_at).abs)/3600).round)/24) %> día/s
 		<% end %>
-		<% if current_user.admin? || current_user.id==micropost.id_usuario2 %>
+		<% if current_user.admin? || current_user.id==micropost.id_usuario2 || current_user.id==@book.id_usuario %>
 		  | <%= link_to "delete", micropost, :method => :delete, :confirm => "You sure?",
 										:title => "Delete #{micropost.coment}" %>
 		<% end %>
