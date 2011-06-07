@@ -10,10 +10,12 @@ and board, where the club and users can discuss about any topic. To access certa
 space, how the new or the board, users should be friends of the club. To do so send a friend 
 request and the club concerned will accept you or not.
 
-ChessVision also organizes championships. These championships can be Swiss Tournament or simple League. 
+ChessVision organizes championships. These championships can be Swiss Tournament or simple League. 
 May be public or private. The number of players must be even and the number of rounds more than zero. 
 These championships may watch the games, results, ranking and participants.
 
+ChessVision also offers a place where users can publish chess problems. The objective is to offer 
+solutions to these problems, discussing them together.
+
 Also available a viewer for PGN games. Here you can view games in PGN seeing each movements. If the 
-file there are various items, you can select the desired. In addition you can also play a quick 
-game of chess against the machine, serve as training.
+file there are various items, you can select the desired.
