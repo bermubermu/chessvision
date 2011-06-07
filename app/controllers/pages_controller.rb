@@ -36,15 +36,6 @@ class PagesController < ApplicationController
 	def chat
 			@title = "Chat"
 	end
-
-	def ia
-		if cookies[:langu]== "en"
-			@title = "Play"
-
-		else
-			@title = "Jugar"
-		end
-	end
 end
 
 

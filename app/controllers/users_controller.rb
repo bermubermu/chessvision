@@ -103,7 +103,7 @@ class UsersController < ApplicationController
 		if cookies[:langu]== "en"
 			if @user.save
 				sign_in @user
-				flash[:success] = "Welcome to Caporal"
+				flash[:success] = "Welcome to ChessVision"
 				redirect_to @user
 			else
 				@title = "Sign up"
@@ -112,7 +112,7 @@ class UsersController < ApplicationController
 		else
 			if @user.save
 				sign_in @user
-				flash[:success] = "Bienvenido a Caporal"
+				flash[:success] = "Bienvenido a ChessVision"
 				redirect_to @user
 			else
 				@title = "Registro"

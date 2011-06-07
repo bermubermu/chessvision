@@ -12,7 +12,7 @@ class TournamentsController < ApplicationController
 	def index
 		@tournaments = Tournament.paginate(:page => params[:page], :order => 'created_at DESC', :per_page => 20 ) 
 		if cookies[:langu]== "en"
-			@title = "Tournament"
+			@title = "Tournaments"
 			@name = "Name"
 			@players = "Players"
 			@rounds = "Rounds"
@@ -20,7 +20,7 @@ class TournamentsController < ApplicationController
 			@kind = "Kind"
 			@ntournament="New Championship"
 		else
-			@title = "Torneo"
+			@title = "Torneos"
 			@name = "Nombre"
 			@players = "Jugadores"
 			@rounds = "Rondas"
@@ -172,6 +172,7 @@ class TournamentsController < ApplicationController
 
 
 	def chat
+		@title = "Chat"
 	end
 
 
@@ -424,10 +425,10 @@ end
 	def new
 		@tournament = Tournament.new
 		if cookies[:langu]== "en"
-			@title = "New Tournament"
+			@title = "New Championship"
 			@msgg = "Registry tournament"
 		else
-			@title = "Nuevo Torneo"
+			@title = "Nuevo Campeonato"
 			@msgg = "Registro de Torneo"
 		end
 	end
@@ -438,18 +439,18 @@ end
 		@tournament.id_usuario = current_user.id
 		if cookies[:langu]== "en"
 			if @tournament.save
-				flash[:success] = "Tournament registered"
+				flash[:success] = "Championship registered"
 				redirect_to @tournament
 			else
-				@title = "Sign up"
+				@title = "New Championship"
 				render 'new'
 			end
 		else
 			if @tournament.save
-				flash[:success] = "Torneo Registrado"
+				flash[:success] = "Campeonato Registrado"
 				redirect_to @tournament
 			else
-				@title = "Registro"
+				@title = "Nuevo Campeonato"
 				render 'new'
 			end
 		end
@@ -465,18 +466,18 @@ end
 		@tournament = Tournament.find(params[:id])
 		if cookies[:langu]== "en"
 			if @tournament.update_attributes(params[:tournament])
-			  flash[:success] = "Tournament upgraded."
+			  flash[:success] = "Championship upgraded."
 			  redirect_to @tournament
 			else
-			  @title = "Edit Tournament"
+			  @title = "Edit Championship"
 			  render 'edit'
 			end
 		else
 			if @tournament.update_attributes(params[:tournament])
-			  flash[:success] = "Torneo Actualizado"
+			  flash[:success] = "Campeonato Actualizado"
 			  redirect_to @tournament
 			else
-			  @title = "Editar Torneo"
+			  @title = "Editar Campeonato"
 			  render 'edit'
 			end
 		end
@@ -486,9 +487,9 @@ end
 		@tournament = Tournament.find(params[:id])
 		@tournament.destroy
 		if cookies[:langu]== "en"
-			flash[:success] = "Tournament destroyed"
+			flash[:success] = "Championship destroyed"
 		else
-			flash[:success] = "Torneo Destruido"
+			flash[:success] = "Campeonato Destruido"
 		end
 		redirect_to tournaments_path
 	end

@@ -33,7 +33,7 @@ class PostsController < ApplicationController
 				flash[:success] = "Post reported"
 				redirect_to @club
 			else
-				@title = "Sign up"
+				@title = "New Post"
 				redirect_to @club
 			end
 		else
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
 				flash[:success] = "Post Registrado"
 				redirect_to @club
 			else
-				@title = "Registro"
+				@title = "Nuevo Post"
 				redirect_to @club
 			end
 		end
@@ -52,6 +52,11 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 		@club = Club.find(id=@post.id_club)
 		@post.destroy
+		if cookies[:langu]== "en"
+			flash[:success] = "Post destroyed"
+		else
+			flash[:success] = "Post Destruido"
+		end
 		redirect_to @club
 	end
 	

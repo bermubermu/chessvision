@@ -30,7 +30,7 @@ class AnswersController < ApplicationController
 
 		if cookies[:langu]== "en"
 			if @answer.save
-				flash[:success] = "Post reported"
+				flash[:success] = "Answer reported"
 				redirect_to @problem
 			else
 				@title = "Sign up"
@@ -38,7 +38,7 @@ class AnswersController < ApplicationController
 			end
 		else
 			if @answer.save
-				flash[:success] = "Post Registrado"
+				flash[:success] = "Respuesta Registrada"
 				redirect_to @problem
 			else
 				@title = "Registro"

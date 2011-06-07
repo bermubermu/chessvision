@@ -298,18 +298,18 @@ class BooksController < ApplicationController
 		@book.id_usuario = current_user.id
 		if cookies[:langu]== "en"
 			if @book.save
-				flash[:success] = "Book registered"
+				flash[:success] = "PGN registered"
 				redirect_to @book
 			else
-				@title = "Sign up"
+				@title = "New PGN"
 				render 'new'
 			end
 		else
 			if @book.save
-				flash[:success] = "Libro Registrado"
+				flash[:success] = "PGN Registrado"
 				redirect_to @book
 			else
-				@title = "Registro"
+				@title = "Nuevo PGN"
 				render 'new'
 			end
 		end
@@ -350,18 +350,18 @@ class BooksController < ApplicationController
 		@book.remove_attachment!
 		if cookies[:langu]== "en"
 			if @book.update_attributes(params[:book])
-			  flash[:success] = "Book upgraded."
+			  flash[:success] = "PGN upgraded."
 			  redirect_to @book
 			else
-			  @title = "Edit Book"
+			  @title = "Edit PGN"
 			  render 'edit'
 			end
 		else
 			if @book.update_attributes(params[:book])
-			  flash[:success] = "Libro Actualizado"
+			  flash[:success] = "PGN Actualizado"
 			  redirect_to @book
 			else
-			  @title = "Editar Libro"
+			  @title = "Editar PGN"
 			  render 'edit'
 			end
 		end
@@ -372,9 +372,9 @@ class BooksController < ApplicationController
 		@book.remove_attachment!
 		@book.destroy
 		if cookies[:langu]== "en"
-			flash[:success] = "Book destroyed"
+			flash[:success] = "PGN destroyed"
 		else
-			flash[:success] = "Libro Destruido"
+			flash[:success] = "PGN Destruido"
 		end
 		redirect_to books_path
 	end

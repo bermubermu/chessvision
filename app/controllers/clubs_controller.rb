@@ -361,7 +361,7 @@ before_filter :authenticate, :only => [:board, :news, :friend, :requestt, :show,
 				flash[:success] = "Club registered"
 				redirect_to @club
 			else
-				@title = "Sign up"
+				@title = "Registry club"
 				render 'new'
 			end
 		else
@@ -369,7 +369,7 @@ before_filter :authenticate, :only => [:board, :news, :friend, :requestt, :show,
 				flash[:success] = "Club Registrado"
 				redirect_to @club
 			else
-				@title = "Registro"
+				@title = "Registro de Club"
 				render 'new'
 			end
 		end

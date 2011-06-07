@@ -30,7 +30,7 @@ class NoticesController < ApplicationController
 
 		if cookies[:langu]== "en"
 			if @notice.save
-				flash[:success] = "Post reported"
+				flash[:success] = "Notice reported"
 				redirect_to @club
 			else
 				@title = "Sign up"
@@ -38,7 +38,7 @@ class NoticesController < ApplicationController
 			end
 		else
 			if @notice.save
-				flash[:success] = "Post Registrado"
+				flash[:success] = "Noticia Registrada"
 				redirect_to @club
 			else
 				@title = "Registro"
@@ -52,6 +52,11 @@ class NoticesController < ApplicationController
 		@notice = Post.find(params[:id])
 		@club = Club.find(id=@notice.id_club)
 		@notice.destroy
+		if cookies[:langu]== "en"
+			flash[:success] = "Notice destroyed"
+		else
+			flash[:success] = "Notice Destruido"
+		end
 		redirect_to @club
 	end
 	

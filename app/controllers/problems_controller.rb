@@ -30,10 +30,8 @@ class ProblemsController < ApplicationController
 	def show
 		@problem = Problem.find(params[:id])
 		@title = @problem.name
-
 		@answer = Answer.new
 		cookies[:last_problem_id] = @problem.id 
-
 		@answerss = Answer.paginate(:page => params[:page], :per_page => 8, :conditions => ["id_problem=?", params[:id]], :order => 'created_at DESC' )
 	end
 
@@ -54,7 +52,7 @@ class ProblemsController < ApplicationController
 				flash[:success] = "Problem registered"
 				redirect_to @problem
 			else
-				@title = "Sign up"
+				@title = "New Problem"
 				render 'new'
 			end
 		else
@@ -62,7 +60,7 @@ class ProblemsController < ApplicationController
 				flash[:success] = "Problema Registrado"
 				redirect_to @problem
 			else
-				@title = "Registro"
+				@title = "Nuevo Problema"
 				render 'new'
 			end
 		end

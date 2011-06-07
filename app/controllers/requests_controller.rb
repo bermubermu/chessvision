@@ -60,7 +60,7 @@ class RequestsController < ApplicationController
 			@request.destroy
 			redirect_to @club
 		else
-			flash[:success] = "Errorr no Registrado"
+			flash[:success] = "Error no Registrado"
 			redirect_to @club
 		end
 	end

@@ -36,7 +36,7 @@ class PlayersController < ApplicationController
 				flash[:success] = "Player reported"
 				redirect_to @tournament
 			else
-				@title = "Sign up"
+				@title = "New Player"
 				redirect_to @tournament
 			end
 		else
@@ -44,7 +44,7 @@ class PlayersController < ApplicationController
 				flash[:success] = "Jugador Registrado"
 				redirect_to @tournament
 			else
-				@title = "Registro"
+				@title = "Nuevo Jugador"
 				redirect_to @tournament
 			end
 		end
@@ -55,6 +55,11 @@ class PlayersController < ApplicationController
 		@player = Player.find(params[:id])
 		@tournament = Tournament.find(id=@player.id_tournament)
 		@player.destroy
+		if cookies[:langu]== "en"
+			flash[:success] = "Player destroyed"
+		else
+			flash[:success] = "Jugador Destruido"
+		end
 		redirect_to @tournament
 	end
 
