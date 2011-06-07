@@ -4,6 +4,7 @@
 
 class ProblemsController < ApplicationController
 	before_filter :authenticate, :only => [:create, :destroy]
+	before_filter :correct_user, :only => [:edit, :requestt, :destroy]
 	
 
 
@@ -115,6 +116,13 @@ class ProblemsController < ApplicationController
 		def authenticate
 		  deny_access unless signed_in?
 		end
+
+	   def correct_user
+		@problem = Problem.find(cookies[:last_problem_id])
+		@user = User.find(id=@problem.id_usuario) 
+		redirect_to(problems_path) unless current_user?(@user) unless current_user.admin?
+
+            end
 
 end
 
