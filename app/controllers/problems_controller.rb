@@ -3,7 +3,7 @@
 #-------------------------------------------------------------------------------------------------------
 
 class ProblemsController < ApplicationController
-	before_filter :authenticate, :only => [:create, :destroy]
+	before_filter :authenticate, :only => [:index, :show, :create, :destroy]
 	before_filter :correct_user, :only => [:edit, :update, :destroy]
 	
 
