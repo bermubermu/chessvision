@@ -131,6 +131,7 @@
 	color: #cacaca;
 	font-size: 14px;
 	padding: 15px;
+	overflow: auto;
 }
 
 .redfile22z ol {
