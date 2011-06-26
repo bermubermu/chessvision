@@ -394,7 +394,7 @@ end
 		end
 		@tournament = Tournament.find(cookies[:last_tournament_id])
 		@title = @tournament.name
-		@playerdd = Player.paginate(:page => params[:page], :per_page => 6, :conditions => ["id_tournament=?", @tournament.id], :order => 'score DESC')
+		@playerdd = Player.paginate(:page => params[:page], :per_page => 66, :conditions => ["id_tournament=?", @tournament.id], :order => 'score DESC')
 
 		@player2 = Player.new(0)
 		@player2.id_usuario = 0
