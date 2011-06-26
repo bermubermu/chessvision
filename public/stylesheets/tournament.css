@@ -129,16 +129,16 @@
 
 .redfile2cla{
 	width: 476px;
-	height:345px;
+
 	margin-left: 12px;
 	background-color: #484848;
-	overflow: auto;
 }
 
 .redfile22z{
 	color: #cacaca;
 	font-size: 14px;
 	padding: 15px;
+	overflow: auto;
 }
 
 .redfile22z ol {
