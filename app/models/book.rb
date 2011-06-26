@@ -9,7 +9,6 @@ class Book < ActiveRecord::Base
 
 	validates_presence_of :event, :message => 'Evento no puede estar en blanco'
 	validates :event, :length   => { :maximum => 50, :message => 'Evento demasiado largo' }
-	validates :round, :length   => { :maximum => 4, :message => 'Ronda demasiado largo' }
 	validates :site, :length   => { :maximum => 50, :message => 'Lugar demasiado largo' }
 	validates :white, :length   => { :maximum => 50, :message => 'Jugador Blancas demasiado largo' }			
 	validates :elo_white, :length   => { :maximum => 4, :message => 'Elo jugador Blancas demasiado largo'}			
