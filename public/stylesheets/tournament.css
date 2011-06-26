@@ -138,6 +138,7 @@
 	list-style:decimal;
 	margin-top: -0.5px;
 	margin-left: -10px;
+	overflow: auto;
 }
 
 .redfile22z li {
